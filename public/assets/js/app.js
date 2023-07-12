@@ -81,7 +81,7 @@ let usernames = new Map();
 // START
 $(document).ready(() => {
     setTimeout(function () {
-        let targetLive = "magashow1";
+        let targetLive = "samka_sum";
         connect(targetLive);
     }, 5000);
 
