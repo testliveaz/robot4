@@ -81,7 +81,7 @@ let usernames = new Map();
 // START
 $(document).ready(() => {
     setTimeout(function () {
-        let targetLive = "freecoinapp";
+        let targetLive = "magashow1";
         connect(targetLive);
     }, 5000);
 
@@ -135,161 +135,7 @@ connection.on('gift', (data) => {
     let userName = data.uniqueId;
 
     if (!isPendingStreak(data) && data.diamondCount > 0) {
-        let giftCount = data.diamondCount * data.repeatCount;
-
-        for (let i = 0; i < data.repeatCount; i++) {
-
-
-
-
-
-            //baliq qulagi geldime
-            if (data.giftId === 8352) {
-                // soundQueue.push(8);
-                playSpecificSound(11);
-            }
-
-
-
-            //turk qehvesi cay verersen
-            if (data.giftId === 5994) {
-                // soundQueue.push(8);
-                playSpecificSound(12);
-            }
-
-
-            if (data.giftId === 37) {
-                //panda hara gelmisux
-                playSpecificSound(13);
-            }
-
-            //barmaq ucunda urek sumqayit 
-            if (data.giftId === 5487) {
-                playSpecificSound(14);
-            }
-
-
-
-            //microfon genceli
-
-            if (data.giftId === 5650) {
-                playSpecificSound(15);
-            }
-
-            //ara usaqlari  el sallayan
-            if (data.giftId === 6059) {
-                // soundQueue.push(8);
-                playSpecificSound(16);
-            }
-
-
-            //pult  bakili
-            if (data.giftId === 6052) {
-                // soundQueue.push(8);
-                playSpecificSound(17);
-            }
-
-            //parfum talis
-            if (data.giftId === 5658) {
-                // soundQueue.push(8);
-                playSpecificSound(18);
-            }
-
-            //sirinqus yeraz
-            if (data.giftId === 5657) {
-                playSpecificSound(19);
-            }
-
-       //bulku qarabag
-            if (data.giftId === 5879) {
-                playSpecificSound(20);
-            }
-
-
-            //naxcivan pult
-            if (data.giftId === 6495) {
-                playSpecificSound(21);
-            }
-
-
-            //stop all 
-            if (data.giftId === 6427 || data.giftId === 6104) {
-                // soundQueue.push(9);
-                pauseAllSounds();
-            }
-
-        }
-
-
-
-
-        for (let i = 0; i < giftCount; i++) {
-
-            // // dondurma  emele gelmez
-            if (data.giftId === 5827) {
-                // soundQueue.push(6);
-                playSpecificSound(1);
-            }
-
-
-            // //sari top eleme onu
-            if (data.giftId === 6169) {
-                // soundQueue.push(6);
-                playSpecificSound(2);
-            }
-
-            // urek top eliyibler
-            if (data.giftId === 7934) {
-                // soundQueue.push(6);
-                playSpecificSound(3);
-            }
-
-            // //gg cole cox
-            if (data.giftId === 6064) {
-                // soundQueue.push(6);
-                playSpecificSound(4);
-            }
-
-            //tiktok siu
-            if (data.giftId === 5269) {
-                // soundQueue.push(1);
-                playSpecificSound(5);
-            }
-
-            //rose siu
-            if (data.giftId === 5655) {
-                // soundQueue.push(2);
-                playSpecificSound(6);
-            }
-
-            // //top footbal 33
-            if (data.giftId === 6093) {
-                playSpecificSound(7);
-                // soundQueue.push(3);
-            }
-
-
-            // //qantel qoyunlar
-            if (data.giftId === 5760) {
-                // soundQueue.push(4);
-                playSpecificSound(8);
-            }
-
-            // //alov mujik
-            if (data.giftId === 5523 || data.giftId === 6793) {
-                // soundQueue.push(5);
-                playSpecificSound(9);
-            }
-
-            // //kalonka auye
-            if (data.giftId === 6042) {
-                // soundQueue.push(6);
-                playSpecificSound(10);
-            }
-
-
-        }
-        if (isPaused) return;
+       
         setTimeout(() => {
             const messages = [
                 { text: " adlı hesaba her kes takip atsın", language: "tr" },
@@ -329,9 +175,9 @@ connection.on('gift', (data) => {
 })
 
 connection.on('social', (data) => {
-    if (data.displayType === "pm_main_follow_message_viewer_2") {
-        playSpecificSound(22);
-    }
+    // if (data.displayType === "pm_main_follow_message_viewer_2") {
+    //     playSpecificSound(22);
+    // }
 });
 
 
@@ -414,11 +260,11 @@ connection.on('like', (data) => {
     let likeCount = data.likeCount;
     let profilePictureUrl = data.profilePictureUrl;
         let totalLikeCount = data.totalLikeCount;
-    if (isPaused) return;
+    // if (isPaused) return;
 
-       if(Math.floor(totalLikeCount / 1000) > Math.floor(previousLikeCount / 1000)) {
-        playSpecificSound(23);
-    }
+    //    if(Math.floor(totalLikeCount / 1000) > Math.floor(previousLikeCount / 1000)) {
+    //     playSpecificSound(23);
+    // }
 
        previousLikeCount = totalLikeCount;
 
@@ -712,7 +558,7 @@ function addRandomMessage() {
     processQueue();
 }
 
-setInterval(addRandomMessage, 20000);
+// setInterval(addRandomMessage, 20000);
 
 
 function onEnd() {
