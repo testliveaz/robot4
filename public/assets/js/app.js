@@ -364,7 +364,7 @@ connection.on('gift', (data) => {
             }
 
                        // qanad beynimi xarab eleme
-             if (data.giftId === 7616) {
+             if (data.giftId === 9081) {
                 // soundQueue.push(6);
                 playSpecificSound(46);
             }
