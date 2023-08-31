@@ -32,6 +32,7 @@ window.onload = function () {
 };
 
 function playSpecificSound(id) {
+
     if (sounds[id]) {
         if (soundCount[id] < maxQueueSizePerSound) {
             soundQueue.push(sounds[id]);
@@ -50,7 +51,7 @@ function playSpecificSound(id) {
 function playNextSound() {
     for (let id in soundCount) {
         if (soundQueue[0] === sounds[id]) {
-            soundCount[id]--;  // Decrement the count for the sound that just finished playings
+            soundCount[id]--;  // Decrement the count for the sound that just finished playing
         }
     }
     soundQueue.shift();
@@ -175,7 +176,12 @@ connection.on('chat', async (data) => {
         sonSesCalmaZamani[member] = simdi;
     }
            
-  
+    // if (lowerCaseComment.includes("fb")) {
+
+    //     playSpecificSound(45);
+
+    //     sonSesCalmaZamani[member] = simdi;
+    // }
 });
 
 
@@ -333,7 +339,7 @@ connection.on('gift', (data) => {
                 playSpecificSound(8);
             }
 
-            // //alov mujik
+            // // mikiiii
             if (data.giftId === 5523 || data.giftId === 6793) {
                 // soundQueue.push(5);
                 playSpecificSound(9);
