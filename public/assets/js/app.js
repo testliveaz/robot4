@@ -297,7 +297,7 @@ connection.on('gift', (data) => {
 
 
             // //sari top eleme onu
-            if (data.giftId === 6169) {
+            if (data.giftId === 9111) {
                 // soundQueue.push(6);
                 playSpecificSound(2);
             }
