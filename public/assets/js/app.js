@@ -75,7 +75,7 @@ let usernames = new Map();
 // START
 $(document).ready(() => {
     setTimeout(function () {
-        let targetLive = "kefli_adam";
+        let targetLive = "coingameaz";
         connect(targetLive);
     }, 5000);
 
