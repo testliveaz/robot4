@@ -32,7 +32,6 @@ window.onload = function () {
 };
 
 function playSpecificSound(id) {
-
     if (sounds[id]) {
         if (soundCount[id] < maxQueueSizePerSound) {
             soundQueue.push(sounds[id]);
@@ -41,17 +40,16 @@ function playSpecificSound(id) {
                 soundQueue[0].play();
             }
         } else {
-            console.log(`Maximum queue size for sound ${id} reached.`);
+            
         }
     } else {
-        console.log(`No sound with id ${id} exists.`);
     }
 }
 
 function playNextSound() {
     for (let id in soundCount) {
         if (soundQueue[0] === sounds[id]) {
-            soundCount[id]--;  // Decrement the count for the sound that just finished playing
+            soundCount[id]--;  // Decrement the count for the sound that just finished playings
         }
     }
     soundQueue.shift();
@@ -75,7 +73,7 @@ let usernames = new Map();
 // START
 $(document).ready(() => {
     setTimeout(function () {
-        let targetLive = "coingameaz";
+        let targetLive = "kefli_adam";
         connect(targetLive);
     }, 5000);
 
@@ -176,12 +174,7 @@ connection.on('chat', async (data) => {
         sonSesCalmaZamani[member] = simdi;
     }
            
-    // if (lowerCaseComment.includes("fb")) {
-
-    //     playSpecificSound(45);
-
-    //     sonSesCalmaZamani[member] = simdi;
-    // }
+  
 });
 
 
@@ -339,7 +332,7 @@ connection.on('gift', (data) => {
                 playSpecificSound(8);
             }
 
-            // // mikiiii
+            // //alov mujik
             if (data.giftId === 5523 || data.giftId === 6793) {
                 // soundQueue.push(5);
                 playSpecificSound(9);
@@ -563,7 +556,6 @@ window.addEventListener("load", async () => {
 
 
     } catch (error) {
-        console.error("Otomatik seslendirme başlatılamadı:", error);
     }
 });
 
@@ -688,7 +680,6 @@ function speak(text) {
             { text: text, language: "en" }]
 
     }
-    console.log("a")
     responsiveVoice.speak(ms, "Turkish Male", { rate: defaultRate, onend: onEnd }, { volume: volumeLevel });
 }
 
@@ -703,7 +694,6 @@ function processQueue() {
             switch (language) {
                 case 'tr':
                     // Türkçe seslendirme
-                    console.log("A")
                     responsiveVoice.speak(message, "Turkish Male", { rate: defaultRate, volume: volumeLevel, onend: onEnd });
                     break;
                 case 'en':
