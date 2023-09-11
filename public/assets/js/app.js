@@ -2,6 +2,7 @@ let soundQueue = [];
 let sounds = {};
 let soundCount = {};
 let maxQueueSizePerSound = 10;
+let retryInterval = 3000; // 5 saniye sonra yeniden deneme süresi
 var volumeLevel = 0.1;  // Volume level for all voices
 
 
@@ -30,27 +31,30 @@ window.onload = function () {
         soundCount[i] = 0;  // Initialize the count for each sound to 0
     }
 };
-
 function playSpecificSound(id) {
-    try {
-        if (sounds[id]) {
-            if (soundCount[id] < maxQueueSizePerSound) {
-                soundQueue.push(sounds[id]);
-                soundCount[id]++;  // Increment the count for the specified sound
-                if (soundQueue.length === 1) {
-                    soundQueue[0].play();
-                }
-            } else {
-                console.log(`Maximum queue size for sound ${id} reached.`);
-            }
-        } else {
-            console.log(`No sound with id ${id} exists.`);
+  try {
+    if (sounds[id]) {
+      if (soundCount[id] < maxQueueSizePerSound) {
+        soundQueue.push(sounds[id]);
+        soundCount[id] = (soundCount[id] || 0) + 1; // Increment the count for the specified sound
+        if (soundQueue.length === 1) {
+          soundQueue[0].play().catch(error => {
+            console.error('Ses oynatılırken bir hata oluştu:', error);
+            
+            // Eğer bir hata oluşursa, birkaç saniye bekleyip yeniden deneyin
+            setTimeout(() => playSpecificSound(id), retryInterval);
+          });
         }
-    } catch (error) {
-        console.error("An error occurred in playSpecificSound:", error);
+      } else {
+        console.log(`Maximum queue size for sound ${id} reached.`);
+      }
+    } else {
+      console.log(`No sound with id ${id} exists.`);
     }
+  } catch (error) {
+    console.error("An error occurred in playSpecificSound:", error);
+  }
 }
-
 
 function playNextSound() {
     for (let id in soundCount) {
@@ -758,7 +762,6 @@ function processQueue() {
             switch (language) {
                 case 'tr':
                     // Türkçe seslendirme
-                    console.log("A")
                     responsiveVoice.speak(message, "Turkish Male", { rate: defaultRate, volume: volumeLevel, onend: onEnd });
                     break;
                 case 'en':
