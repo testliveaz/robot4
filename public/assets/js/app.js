@@ -83,7 +83,7 @@ let usernames = new Map();
 // START
 $(document).ready(() => {
     setTimeout(function () {
-        let targetLive = "mirt_ses";
+        let targetLive = "foryou_game";
         connect(targetLive);
     }, 5000);
 
