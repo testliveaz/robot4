@@ -83,7 +83,7 @@ let usernames = new Map();
 // START
 $(document).ready(() => {
     setTimeout(function () {
-        let targetLive = "foryou_game";
+        let targetLive = "esmaa774";
         connect(targetLive);
     }, 5000);
 
@@ -258,13 +258,13 @@ connection.on('gift', (data) => {
            //kalpak qarabag
             if (data.giftId === 6425) {
                 
-                playSpecificSound(20);
+                playSpecificSound(26);
             }
 
             //naxcivan dino
             if (data.giftId === 6560) {
                 
-                playSpecificSound(21);
+                playSpecificSound(46);
             }
 
              //resadddd ayaqqabi
@@ -344,6 +344,12 @@ playSpecificSound(47);
                 // soundQueue.push(6);
                 playSpecificSound(1);
                 
+            }
+
+             // //sari top eleme onu
+            if (data.giftId === 8913) {
+                // soundQueue.push(6);
+                playSpecificSound(7);
             }
 
             // //sari top eleme onu
