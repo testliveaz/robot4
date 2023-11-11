@@ -32,28 +32,28 @@ window.onload = function () {
     }
 };
 function playSpecificSound(id) {
-    try {
-        if (sounds[id]) {
-            if (soundCount[id] < maxQueueSizePerSound) {
-                soundQueue.push(sounds[id]);
-                soundCount[id] = (soundCount[id] || 0) + 1; // Increment the count for the specified sound
-                if (soundQueue.length === 1) {
-                    soundQueue[0].play().catch(error => {
-                        console.error('Ses oynatılırken bir hata oluştu:', error);
-
-                        // Eğer bir hata oluşursa, birkaç saniye bekleyip yeniden deneyin
-                        setTimeout(() => playSpecificSound(id), retryInterval);
-                    });
-                }
-            } else {
-                console.log(`Maximum queue size for sound ${id} reached.`);
-            }
-        } else {
-            console.log(`No sound with id ${id} exists.`);
+  try {
+    if (sounds[id]) {
+      if (soundCount[id] < maxQueueSizePerSound) {
+        soundQueue.push(sounds[id]);
+        soundCount[id] = (soundCount[id] || 0) + 1; // Increment the count for the specified sound
+        if (soundQueue.length === 1) {
+          soundQueue[0].play().catch(error => {
+            console.error('Ses oynatılırken bir hata oluştu:', error);
+            
+            // Eğer bir hata oluşursa, birkaç saniye bekleyip yeniden deneyin
+            setTimeout(() => playSpecificSound(id), retryInterval);
+          });
         }
-    } catch (error) {
-        console.error("An error occurred in playSpecificSound:", error);
+      } else {
+        console.log(`Maximum queue size for sound ${id} reached.`);
+      }
+    } else {
+      console.log(`No sound with id ${id} exists.`);
     }
+  } catch (error) {
+    console.error("An error occurred in playSpecificSound:", error);
+  }
 }
 
 function playNextSound() {
@@ -126,7 +126,7 @@ function connect(targetLive) {
     } else {
         alert('İstifadəçi adını daxil et');
     }
-
+    
 }
 
 let sonSesCalmaZamani = {};
@@ -134,7 +134,7 @@ let sonSesCalmaZamani = {};
 connection.on('chat', async (data) => {
     let member = data.nickname;
     let lowerCaseComment = data.comment.toLowerCase();
-
+    
     // Şimdiki zamanı alıyoruz
     let simdi = new Date().getTime();
 
@@ -145,7 +145,7 @@ connection.on('chat', async (data) => {
     }
 
     if (lowerCaseComment.includes("fyp")) {
-        let numbers = [27, 28, 29, 30, 31, 32, 38, 39, 40];
+        let numbers = [27,28,29,30,31,32,38,39,40];
         let randomIndex = Math.floor(Math.random() * numbers.length);
         let randomNumber = numbers[randomIndex];
         playSpecificSound(randomNumber);
@@ -154,7 +154,7 @@ connection.on('chat', async (data) => {
         sonSesCalmaZamani[member] = simdi;
     }
     if (lowerCaseComment.includes("bantu")) {
-        let numbers2 = [35, 44];
+        let numbers2 = [35,44];
         let randomIndex2 = Math.floor(Math.random() * numbers2.length);
         let randomNumber2 = numbers2[randomIndex2];
         playSpecificSound(randomNumber2);
@@ -162,20 +162,20 @@ connection.on('chat', async (data) => {
         sonSesCalmaZamani[member] = simdi;
     }
     if (lowerCaseComment.includes("up")) {
-        let numbers1 = [34, 41, 42, 43];
+        let numbers1 = [34,41,42,43];
         let randomIndex1 = Math.floor(Math.random() * numbers1.length);
         let randomNumber1 = numbers1[randomIndex1];
         playSpecificSound(randomNumber1);
 
         sonSesCalmaZamani[member] = simdi;
     }
-    if (lowerCaseComment.includes("salam") || lowerCaseComment.includes("selam") || lowerCaseComment.includes("slm")) {
+        if (lowerCaseComment.includes("salam") || lowerCaseComment.includes("selam") || lowerCaseComment.includes("slm") ) {
 
         playSpecificSound(36);
 
         sonSesCalmaZamani[member] = simdi;
     }
-    if (lowerCaseComment.includes("necesen") || lowerCaseComment.includes("necəsən") || lowerCaseComment.includes("ncs") || lowerCaseComment.includes("necesən") || lowerCaseComment.includes("netersen") || lowerCaseComment.includes("nətərsən")) {
+            if (lowerCaseComment.includes("necesen") || lowerCaseComment.includes("necəsən") || lowerCaseComment.includes("ncs")  || lowerCaseComment.includes("necesən")  || lowerCaseComment.includes("netersen")  || lowerCaseComment.includes("nətərsən")) {
 
         playSpecificSound(37);
 
@@ -206,28 +206,28 @@ connection.on('gift', (data) => {
             //turk qehvesi cay verersen
             if (data.giftId === 5994) {
                 // soundQueue.push(8);
-
+                
                 playSpecificSound(12);
-
+                
             }
-
+            
             if (data.giftId === 37) {
                 //panda hara gelmisux
-
+                
                 playSpecificSound(13);
             }
 
             //barmaq ucunda her kes kacisiyor
             if (data.giftId === 5487) {
-
+                
                 playSpecificSound(14);
-
+                
             }
-
+            
             //microfon genceli
 
             if (data.giftId === 5650) {
-
+                
                 playSpecificSound(15);
             }
 
@@ -251,80 +251,80 @@ connection.on('gift', (data) => {
 
             //sirinqus yeraz
             if (data.giftId === 5657) {
-
+                
                 playSpecificSound(19);
             }
 
-            //kalpak qarabag
+           //kalpak qarabag
             if (data.giftId === 6425) {
-
+                
                 playSpecificSound(26);
             }
 
             //naxcivan dino
             if (data.giftId === 6560) {
-
+                
                 playSpecificSound(46);
             }
 
-            //resadddd ayaqqabi
+             //resadddd ayaqqabi
             if (data.giftId === 8890) {
-
+                
                 playSpecificSound(47);
             }
 
-
-            //  Bütün səslər
+            
+                  //  Bütün səslər
             if (data.giftId === 5585) {
-                playSpecificSound(1);
-                playSpecificSound(2);
-                playSpecificSound(3);
-                playSpecificSound(4);
-                playSpecificSound(5);
-                playSpecificSound(6);
-                playSpecificSound(7);
-                playSpecificSound(8);
-                playSpecificSound(9);
-                playSpecificSound(10);
-                playSpecificSound(11);
-                playSpecificSound(12);
-                playSpecificSound(13);
-                playSpecificSound(14);
-                playSpecificSound(15);
-                playSpecificSound(16);
-                playSpecificSound(17);
-                playSpecificSound(18);
-                playSpecificSound(19);
-                playSpecificSound(20);
-                playSpecificSound(21);
-                playSpecificSound(22);
-                playSpecificSound(23);
-                playSpecificSound(24);
-                playSpecificSound(25);
-                playSpecificSound(26);
-                playSpecificSound(27);
-                playSpecificSound(28);
-                playSpecificSound(29);
-                playSpecificSound(30);
-                playSpecificSound(31);
-                playSpecificSound(32);
-                playSpecificSound(33);
-                playSpecificSound(34);
-                playSpecificSound(35);
-                playSpecificSound(36);
-                playSpecificSound(37);
-                playSpecificSound(38);
-                playSpecificSound(39);
-                playSpecificSound(40);
-                playSpecificSound(41);
-                playSpecificSound(42);
-                playSpecificSound(43);
-                playSpecificSound(44);
-                playSpecificSound(45);
-                playSpecificSound(46);
-                playSpecificSound(47);
+             playSpecificSound(1);
+playSpecificSound(2);
+playSpecificSound(3);
+playSpecificSound(4);
+playSpecificSound(5);
+playSpecificSound(6);
+playSpecificSound(7);
+playSpecificSound(8);
+playSpecificSound(9);
+playSpecificSound(10);
+playSpecificSound(11);
+playSpecificSound(12);
+playSpecificSound(13);
+playSpecificSound(14);
+playSpecificSound(15);
+playSpecificSound(16);
+playSpecificSound(17);
+playSpecificSound(18);
+playSpecificSound(19);
+playSpecificSound(20);
+playSpecificSound(21);
+playSpecificSound(22);
+playSpecificSound(23);
+playSpecificSound(24);
+playSpecificSound(25);
+playSpecificSound(26);
+playSpecificSound(27);
+playSpecificSound(28);
+playSpecificSound(29);
+playSpecificSound(30);
+playSpecificSound(31);
+playSpecificSound(32);
+playSpecificSound(33);
+playSpecificSound(34);
+playSpecificSound(35);
+playSpecificSound(36);
+playSpecificSound(37);
+playSpecificSound(38);
+playSpecificSound(39);
+playSpecificSound(40);
+playSpecificSound(41);
+playSpecificSound(42);
+playSpecificSound(43);
+playSpecificSound(44);
+playSpecificSound(45);
+playSpecificSound(46);
+playSpecificSound(47);
 
-            }
+}
 
 
 
@@ -336,17 +336,17 @@ connection.on('gift', (data) => {
 
         }
 
-
+        
         for (let i = 0; i < giftCount; i++) {
 
             // // dondurma  emele gelmez
             if (data.giftId === 5827) {
                 // soundQueue.push(6);
                 playSpecificSound(1);
-
+                
             }
 
-            // //sari top eleme onu
+             // //sari top eleme onu
             if (data.giftId === 8913) {
                 // soundQueue.push(6);
                 playSpecificSound(7);
@@ -362,27 +362,27 @@ connection.on('gift', (data) => {
             if (data.giftId === 7934) {
                 // soundQueue.push(6);
                 playSpecificSound(3);
-
+                
             }
 
             // //gg cole cox
             if (data.giftId === 6064) {
                 // soundQueue.push(6);
-
+                
                 playSpecificSound(4);
             }
 
             //tiktok siu
             if (data.giftId === 5269) {
                 // soundQueue.push(1);
-
+                
                 playSpecificSound(5);
             }
 
             //rose siu
             if (data.giftId === 5655) {
                 // soundQueue.push(2);
-
+                
                 playSpecificSound(6);
             }
 
@@ -396,14 +396,14 @@ connection.on('gift', (data) => {
             // //qantel qoyunlar
             if (data.giftId === 5760) {
                 // soundQueue.push(4);
-
+                
                 playSpecificSound(8);
             }
 
             // // mikiiii
             if (data.giftId === 5523 || data.giftId === 6793) {
                 // soundQueue.push(5);
-
+                
                 playSpecificSound(9);
             }
 
@@ -413,8 +413,8 @@ connection.on('gift', (data) => {
                 playSpecificSound(10);
             }
 
-            // // bextiyar
-            if (data.giftId === 6603) {
+             // // bextiyar
+             if (data.giftId === 6603) {
                 // soundQueue.push(6);
                 playSpecificSound(25);
             }
@@ -425,16 +425,16 @@ connection.on('gift', (data) => {
             //     playSpecificSound(25);
             // }
 
-            // //qucaqlayan hayif menim ezyetim
-            if (data.giftId === 8807) {
+             // //qucaqlayan hayif menim ezyetim
+             if (data.giftId === 8807) {
                 // soundQueue.push(6);
                 playSpecificSound(26);
             }
 
-            // qanad beynimi xarab eleme
-            if (data.giftId === 9081) {
+                       // qanad beynimi xarab eleme
+             if (data.giftId === 9081) {
                 // soundQueue.push(6);
-
+                 
                 playSpecificSound(46);
             }
 
@@ -480,25 +480,25 @@ connection.on('gift', (data) => {
 let sonSesCalmaZamani1 = {};
 
 connection.on('social', (data) => {
-    let member = data.nickname;
-
+     let member = data.nickname;
+    
     // Şimdiki zamanı alıyoruz
     let simdi1 = new Date().getTime();
 
     if (data.displayType === "pm_main_follow_message_viewer_2") {
-
+        
         playSpecificSound(22);
     }
 
-    // Kullanıcının son 20 saniye içinde bir ses çalıp çalmadığını kontrol ediyoruz
+        // Kullanıcının son 20 saniye içinde bir ses çalıp çalmadığını kontrol ediyoruz
     if (sonSesCalmaZamani1[member] && (simdi1 - sonSesCalmaZamani1[member] < 20000)) {
         // Eğer çaldıysa, bir ses çalmayı engelliyoruz
         return;
     }
-    if (data.displayType === "pm_mt_guidance_share") {
-
+        if (data.displayType === "pm_mt_guidance_share") {
+            
         playSpecificSound(33);
-        // Bu ses çalmanın zamanını kaydediyoruz
+              // Bu ses çalmanın zamanını kaydediyoruz
         sonSesCalmaZamani1[member] = simdi1;
     }
 });
@@ -582,13 +582,13 @@ connection.on('like', (data) => {
     let userName = data.uniqueId;
     let likeCount = data.likeCount;
     let profilePictureUrl = data.profilePictureUrl;
-    let totalLikeCount = data.totalLikeCount;
+        let totalLikeCount = data.totalLikeCount;
 
-    if (Math.floor(totalLikeCount / 1000) > Math.floor(previousLikeCount / 1000)) {
+       if(Math.floor(totalLikeCount / 1000) > Math.floor(previousLikeCount / 1000)) {
         playSpecificSound(23);
     }
 
-    previousLikeCount = totalLikeCount;
+       previousLikeCount = totalLikeCount;
 
     messagesQueue = messagesQueue.filter(item => item.type !== 'random');
     const messages = [
@@ -705,7 +705,7 @@ connection.on('like', (data) => {
 })
 // Otomatik seslendirme başlatma
 window.addEventListener("load", async () => {
-    console.log = function () { }
+    console.log = function() {}
     try {
         // Kullanıcıdan otomatik seslendirmeye izin isteyin
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -724,15 +724,6 @@ function onEnd() {
     messagesQueue.shift();
     processQueue();
 }
-
-
-// setInterval(addRandomMessage, 20000);
-
-
-// function onEnd() {
-//     messagesQueue.shift();
-//     processQueue();
-// }
 
 function containsBannedWords(text) {
     const bannedWords = ["pox", "cindir", "amciq", "got", "meme", "məmə", "dillaq", "dıllağ", "göt", "amcıq", "Bok", "am", "kahbe", "Qəhbə", "Qancıx", "Götveren"];
