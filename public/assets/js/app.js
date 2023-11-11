@@ -610,8 +610,6 @@ connection.on('like', (data) => {
         { text: " günah priusdadır", language: "tr" },
         { text: " ŞAQmandır şaqman", language: "tr" },
         { text: " sevmedime geldim baktım vay Allah gördüm büyük adam dedim vayyy", language: "tr" },
-        { text: "üç nokta bir nida balam sana elvida", language: "tr" },
-        { text: " ben ölüm get bir su iç gel", language: "tr" },
         { text: " burda bir tane güzellik var", language: "tr" },
         { text: " buzovum çok keşeydi", language: "tr" },
         { text: " derdi kemi atmışam bakını şekiye katmışam", language: "tr" },
