@@ -740,10 +740,8 @@ function addRandomMessage() {
         { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
         { text: "barış ne yaptın sen", language: "tr" },
         { text: "anam emele gelmez", language: "tr" },
-        { text: "ben manyağım", language: "tr" },
+   
         { text: "Benim kafam infakt geçirdi", language: "tr" },
-        { text: "ben manyağım", language: "tr" },
-        { text: "ben deliyim", language: "tr" },
         { text: "Canlını paylaş", language: "tr" },
         { text: "konuşmakdan yoruldum", language: "tr" },
         { text: "ayaklarım kaşınıyor", language: "tr" },
@@ -762,8 +760,6 @@ function addRandomMessage() {
         { text: "Bağlantıda kal, takip et ve paylaş", language: "tr" },
         { text: "anam emele gelmez", language: "tr" },
         { text: "ayaklarım kaşınıyor", language: "tr" },
-        { text: "ben manyağım", language: "tr" },
-        { text: "ben deliyim", language: "tr" },
         { text: "mukrufunu yere koy", language: "tr" },
 
         { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
@@ -773,7 +769,6 @@ function addRandomMessage() {
         { text: "Bir birinize takip gönderin", language: "tr" },
         { text: "Hesabımı takip eden son on kişiyi takip et", language: "tr" },
         { text: "Kasıbların kadasını alım", language: "tr" },
-        { text: "ben manyağım", language: "tr" },
         { text: "Halım yamandı ceyran", language: "tr" },
         { text: "Canlını beğenen her kese takip gönderin", language: "tr" },
         { text: "Yayımı paylaşanlara takip gönderin", language: "tr" },
@@ -783,7 +778,6 @@ function addRandomMessage() {
         { text: "mukrufunu yere koy", language: "tr" },
         { text: "Müthişsiniz, teşekkürler", language: "tr" },
         { text: "Ekranı beğen adını söyleyim", language: "tr" },
-        { text: "ben manyağım", language: "tr" },
         { text: "neden uyumuyorsun arkadaş", language: "tr" },
         { text: "otuz üç yaşım var", language: "tr" },
         { text: "vaz sürenler ürekdi", language: "tr" },
@@ -794,9 +788,6 @@ function addRandomMessage() {
         { text: "Yeni arkadaşlar keşfet, takip et ve etkileşime gir", language: "tr" },
         { text: "ay kız bir dakika deyandaa", language: "tr" },
         { text: "bardan kendime kız tapdım", language: "tr" },
-        { text: "ben manyağım", language: "tr" },
-        { text: "ayaklarım kaşınıyor", language: "tr" },
-        { text: "ben deliyim", language: "tr" },
         { text: "Halım yamandı ceyran", language: "tr" },
 
         { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
@@ -826,8 +817,6 @@ function addRandomMessage() {
         { text: "Hoşkedem kaybolmuş", language: "tr" },
         { text: "Canlını beğenen her kese takip gönderin", language: "tr" },
         { text: "Yayımı paylaşanlara takip gönderin", language: "tr" },
-        { text: "ben deliyim", language: "tr" },
-        { text: "ben manyağım", language: "tr" },
 
         { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
         { text: "Arkadaşlarını davet eden her kese takip gönderin", language: "tr" },
@@ -854,7 +843,6 @@ function addRandomMessage() {
 
         { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
         { text: "Benim ondan gözüm su içmiyor", language: "tr" },
-        { text: "ben manyağım", language: "tr" },
         { text: "Canlını beğenen her kese takip gönderin", language: "tr" },
         { text: "Yayımı paylaşanlara takip gönderin", language: "tr" },
         { text: "Arkadaşlarını davet eden her kese takip gönderin", language: "tr" },
@@ -862,7 +850,6 @@ function addRandomMessage() {
         { text: "konuşmakdan yoruldum", language: "tr" },
         { text: "mukrufunu yere koy", language: "tr" },
 
-        { text: "ben deliyim", language: "tr" },
         { text: "Karşılıklı destek için beğen ve yorum yap", language: "tr" },
         { text: "Barış ne yaptın sen", language: "tr" },
         { text: "Desteğiniz için teşekkür ederiz", language: "tr" },
@@ -871,7 +858,6 @@ function addRandomMessage() {
         { text: "Benim kafam infakt geçirdi", language: "tr" },
         { text: "Hesabımı takip eden son on kişiyi takip et", language: "tr" },
         { text: "Kasıbların kadasını alım", language: "tr" },
-        { text: "ben manyağım", language: "tr" },
 
         { text: "Kasıbların kadasını alım", language: "tr" },
 
@@ -884,7 +870,6 @@ function addRandomMessage() {
         { text: "mukrufunu yere koy", language: "tr" },
         { text: "Hoşkedem kaybolmuş", language: "tr" },
         { text: "konuşmakdan yoruldum", language: "tr" },
-        { text: "ben deliyim", language: "tr" },
 
         { text: "Halım yamandı ceyran", language: "tr" },
         { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
