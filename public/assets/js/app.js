@@ -524,6 +524,35 @@ connection.on('chat', async (data) => {
         }
 
     }
+    if (lowerCaseComment.includes("kafan güzel")    ) {
+
+        let response;
+
+        response = { text: member + " hayır bana içki vermiyor", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+    if (lowerCaseComment.includes("yatırsan?") ||  lowerCaseComment.includes("yatirsan?")   ||  lowerCaseComment.includes("yatirsan")   ||  lowerCaseComment.includes("yatırsan")     ) {
+
+        let response;
+
+        response = { text: member + " hayır ben uyumam  gece hayatına dalarım", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
 
     if (lowerCaseComment.includes("qalirsan") || lowerCaseComment.includes("qalırsan")    ) {
 
