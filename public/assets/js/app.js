@@ -614,7 +614,6 @@ connection.on('like', (data) => {
         { text: " buzovum çok keşeydi", language: "tr" },
         { text: " derdi kemi atmışam bakını şekiye katmışam", language: "tr" },
         { text: " telefonuvun kodu ne?", language: "tr" },
-        { text: " yavaş yavaş terpenir ha diyesen", language: "tr" },
         { text: " ben sana göre yaşıyorum", language: "tr" },
         { text: "elli bin neye vermişeme buna", language: "tr" },
         { text: " Akulalar oyaktılar yatmıyıb", language: "tr" },
