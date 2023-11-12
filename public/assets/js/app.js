@@ -211,7 +211,50 @@ connection.on('chat', async (data) => {
         }
 
     }
+    if (lowerCaseComment.includes("qurbağa") || lowerCaseComment.includes("qurbaga")  || lowerCaseComment.includes("kurbağa")  ) {
 
+        let response;
+
+        response = { text: member + " kurbağa vak vak eden bir hayvandır", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("canavar") ) {
+
+        let response;
+
+        response = { text: member + " evet ben canavarım mır hav hav", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("vehşi")  || lowerCaseComment.includes("vehsi")  || lowerCaseComment.includes("vəhsi")  || lowerCaseComment.includes("vəhşi")) {
+
+        let response;
+
+        response = { text: member + " evet ben vehşiyim muaağğ", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
     
     if (lowerCaseComment.includes("robot") ) {
 
@@ -242,6 +285,7 @@ connection.on('chat', async (data) => {
         }
 
     }
+
 
     if (lowerCaseComment.includes("adın") || lowerCaseComment.includes("adin") || lowerCaseComment.includes("adın nedir") || lowerCaseComment.includes("adin nedir") ) {
 
@@ -396,23 +440,42 @@ connection.on('chat', async (data) => {
 
     }
 
+    if (lowerCaseComment.includes("naxcivan") || lowerCaseComment.includes("naxcıvan") || lowerCaseComment.includes("naxçıvan")    ) {
+
+        let response;
+
+        response = { text: member + " nahçıvanlılar ürekdir", language: "tr", type: 'like' };
 
 
-    const bannedWords = ["pox", "cindir", "amciq", "got", "meme", "məmə", "dillaq", "dıllağ", "göt", "amcıq", "Bok", "am", "kahbe", "Qəhbə", "Qancıx", "Götveren", "pesi","pes","peyser","peysər","gijd"];
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+
+
+
+    const bannedWords = ["pox", "cindir", "amciq", "got", "meme", "mal", "məmə", "dillaq", "dıllağ", "göt", "amcıq", "Bok", "am", "kahbe", "Qəhbə", "Qancıx", "Götveren", "pesi", "pes", "peyser", "peysər", "gijd"];
 
     let response;
-
-
+    
+    // Yorumu kelimelere ayır
+    const wordsInComment = lowerCaseComment.split(/\s+/);
+    
     // Küfür kontrolü
-    if (bannedWords.some(bannedWord => lowerCaseComment.includes(bannedWord))) {
+    if (wordsInComment.some(word => bannedWords.includes(word))) {
         response = { text: member + ", lütfen küfür etme. sana yakışmadı.", language: "tr", type: 'warning' };
-          // Eğer uygun bir yanıt varsa, kuyruğa ekle
-          if (response && !usernames.has(member)) {
+    
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
     }
-
+    
     if (lowerCaseComment.includes("program") || lowerCaseComment.includes("programin") || lowerCaseComment.includes("programın")   || lowerCaseComment.includes("programi")   || lowerCaseComment.includes("programı")   ) {
 
         let response;
@@ -978,7 +1041,7 @@ connection.on('like', (data) => {
         { text: " uça uça geleceyem gel desen", language: "tr" },
         { text: " o seni kandırıyor", language: "tr" },
         { text: " günah priusdadır", language: "tr" },
-        { text: " ŞAQmandır şaqman", language: "tr" },
+        { text: " ŞAkmandır şakman", language: "tr" },
         { text: " sevmedime geldim baktım vay Allah gördüm büyük adam dedim vayyy", language: "tr" },
         { text: " burda bir tane güzellik var", language: "tr" },
         { text: " buzovum çok keşeydi", language: "tr" },
@@ -1019,7 +1082,7 @@ connection.on('like', (data) => {
         { text: "şappur şuppur beni öp", language: "tr" },
         { text: "bu sözleri tekrar edirik", language: "tr" },
         { text: " dünya senin dünya benim dünya heç kimin", language: "tr" },
-        { text: " nömre ezilib yoksa bufer?", language: "tr" },
+        { text: " nömre ezilib yoksa buufer?", language: "tr" },
         { text: " bakışın karşısısında çetin ki bir kes dayana", language: "tr" },
         { text: " cebinde ne kadar paran var?", language: "tr" },
         { text: " aşkından geberdiyim nasılsın?", language: "tr" },
