@@ -177,7 +177,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -191,7 +191,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -205,7 +205,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -220,7 +220,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -235,7 +235,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -250,7 +250,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -265,7 +265,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -281,7 +281,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -296,7 +296,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -312,7 +312,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -330,7 +330,7 @@ connection.on('chat', async (data) => {
     if (bannedWords.some(bannedWord => lowerCaseComment.includes(bannedWord))) {
         response = { text: member + ", lütfen küfür etme. sana yakışmadı.", language: "tr", type: 'warning' };
           // Eğer uygun bir yanıt varsa, kuyruğa ekle
-          if (response && !usernames.has(userName)) {
+          if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -344,7 +344,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -360,7 +360,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -376,7 +376,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -392,7 +392,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -407,7 +407,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -422,7 +422,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -437,7 +437,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -452,7 +452,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
@@ -467,7 +467,7 @@ connection.on('chat', async (data) => {
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(userName)) {
+        if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
         }
