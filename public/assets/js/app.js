@@ -216,7 +216,7 @@ connection.on('chat', async (data) => {
 
         let response;
 
-        response = { text: member + " Benim  nerbalayım haladenik ustası", language: "tr", type: 'like' };
+        response = { text: member + " Ben nerbalayım haladenik ustası", language: "tr", type: 'like' };
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
