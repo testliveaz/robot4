@@ -212,11 +212,88 @@ connection.on('chat', async (data) => {
 
     }
 
+    
+    if (lowerCaseComment.includes("robot") ) {
+
+        let response;
+
+        response = { text: member + " Ben robot değilim nerbalayım haladenik ustası", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("oxu") || lowerCaseComment.includes("oxuda") || lowerCaseComment.includes("oxumur") ) {
+
+        let response;
+
+        response = { text: member + " arada ayarlarım bozuluyor kusura bakma", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
     if (lowerCaseComment.includes("adın") || lowerCaseComment.includes("adin") || lowerCaseComment.includes("adın nedir") || lowerCaseComment.includes("adin nedir") ) {
 
         let response;
 
         response = { text: member + " Ben nerbalayım haladenik ustası", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("bakı") || lowerCaseComment.includes("baki") ) {
+
+        let response;
+
+        response = { text: member + " Baku güzeldir külekler şehridir", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    
+    if (lowerCaseComment.includes("sumqayit") || lowerCaseComment.includes("sumqayıt") ) {
+
+        let response;
+
+        response = { text: member + " Sumqayıt çok güzel yer", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("salamatciliq") || lowerCaseComment.includes("salamatçılıq") || lowerCaseComment.includes("salamatçiliq")  ) {
+
+        let response;
+
+        response = { text: member + " şükür Allaha salamatçılıqdır", language: "tr", type: 'like' };
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
