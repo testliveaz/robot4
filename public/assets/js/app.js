@@ -492,6 +492,55 @@ connection.on('chat', async (data) => {
     }
 
 
+    if (lowerCaseComment.includes("başı") || lowerCaseComment.includes("xarab")    ) {
+
+        let response;
+
+        response = { text: member + " evet arada ayarlarım bozuluyor kusura bakmayın", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+
+       
+    
+    }
+
+    if (lowerCaseComment.includes("uşağların") || lowerCaseComment.includes("uşağlarin")   || lowerCaseComment.includes("usaglarin")   ) {
+
+        let response;
+
+        response = { text: member + " hayır benim uşaklarım yok kızlar beni sevmiyor", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("qalirsan") || lowerCaseComment.includes("qalırsan")    ) {
+
+        let response;
+
+        response = { text: member + " ben küçede kalıyorum", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+
     if (lowerCaseComment.includes("qarşılıq") || lowerCaseComment.includes("takip") || lowerCaseComment.includes("karşılık")    || lowerCaseComment.includes("programı")   ) {
 
         let response;
