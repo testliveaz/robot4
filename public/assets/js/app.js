@@ -171,16 +171,309 @@ connection.on('chat', async (data) => {
     }
     if (lowerCaseComment.includes("salam") || lowerCaseComment.includes("selam") || lowerCaseComment.includes("slm")) {
 
-        playSpecificSound(36);
+        let response;
 
-        sonSesCalmaZamani[member] = simdi;
+        response = { text: member + " Salam kadanalım hoş geldin", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
     }
-    if (lowerCaseComment.includes("necesen") || lowerCaseComment.includes("necəsən") || lowerCaseComment.includes("ncs") || lowerCaseComment.includes("necesən") || lowerCaseComment.includes("netersen") || lowerCaseComment.includes("nətərsən")) {
+    if (lowerCaseComment.includes("necesen") || lowerCaseComment.includes("necəsən") || lowerCaseComment.includes("ncs") || lowerCaseComment.includes("nasilsin") || lowerCaseComment.includes("nasılsın") || lowerCaseComment.includes("necesən") || lowerCaseComment.includes("netersen") || lowerCaseComment.includes("nətərsən")) {
 
-        playSpecificSound(37);
+        let response;
 
-        sonSesCalmaZamani[member] = simdi;
+        response = { text: member + " bomba gibiyim, sen netersen?", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
     }
+
+    if (lowerCaseComment.includes("qos") || lowerCaseComment.includes("qoş")  || lowerCaseComment.includes("nolar")) {
+
+        let response;
+
+        response = { text: member + " Ben hiçbir şey koşamam her şey otomatik", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("adın") || lowerCaseComment.includes("adin") || lowerCaseComment.includes("adın nedir") || lowerCaseComment.includes("adin nedir") ) {
+
+        let response;
+
+        response = { text: member + " Benim  nerbalayım haladenik ustası", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("haralisan") || lowerCaseComment.includes("haralısan") || lowerCaseComment.includes("nerelisin")  ) {
+
+        let response;
+
+        response = { text: member + " ben Oğuzluyum . Amma Azerbaycan bölünmez", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("aşkım") || lowerCaseComment.includes("askim")  || lowerCaseComment.includes("aşkım")   ) {
+
+        let response;
+
+        response = { text: member + " aşkım seni hiç kime yar etmem", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("gözel") || lowerCaseComment.includes("gözəl")   ) {
+
+        let response;
+
+        response = { text: member + " evet hamıdan güzel o", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    
+    if (lowerCaseComment.includes("teşekkür")  ||  lowerCaseComment.includes("təşəkkür") ||  lowerCaseComment.includes("tsk")  ||  lowerCaseComment.includes("tşk")) {
+
+        let response;
+
+        response = { text: member + " asıl ben teşekkür ederim", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("qorxdum")  ) {
+
+        let response;
+
+        response = { text: member + " korkma adam yiyen değilim", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    
+    if (lowerCaseComment.includes("ölürəm") || lowerCaseComment.includes("ölürem") || lowerCaseComment.includes("olurem") || lowerCaseComment.includes("ölurem")   ) {
+
+        let response;
+
+        response = { text: member + " ölme daha karpız keseceğiz", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+
+
+    const bannedWords = ["pox", "cindir", "amciq", "got", "meme", "məmə", "dillaq", "dıllağ", "göt", "amcıq", "Bok", "am", "kahbe", "Qəhbə", "Qancıx", "Götveren", "pesi","pes","peyser","peysər","gijd"];
+
+    let response;
+
+
+    // Küfür kontrolü
+    if (bannedWords.some(bannedWord => lowerCaseComment.includes(bannedWord))) {
+        response = { text: member + ", lütfen küfür etme. sana yakışmadı.", language: "tr", type: 'warning' };
+          // Eğer uygun bir yanıt varsa, kuyruğa ekle
+          if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("program") || lowerCaseComment.includes("programin") || lowerCaseComment.includes("programın")   || lowerCaseComment.includes("programi")   || lowerCaseComment.includes("programı")   ) {
+
+        let response;
+
+        response = { text: member + " bu program değilki Orhan abi kendisi tasarladı beni", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+
+    if (lowerCaseComment.includes("qarşılıq") || lowerCaseComment.includes("takip") || lowerCaseComment.includes("karşılık")    || lowerCaseComment.includes("programı")   ) {
+
+        let response;
+
+        response = { text: member + " adlı hesaba her kes takip göndersin", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    
+    if (lowerCaseComment.includes("yaxşiyam") || lowerCaseComment.includes("yaxşıyam") || lowerCaseComment.includes("elayam")    || lowerCaseComment.includes("əlayam")   ) {
+
+        let response;
+
+        response = { text: member + " yahşı olmağına sevindim", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+        
+    if (lowerCaseComment.includes("bəli") || lowerCaseComment.includes("beli")   ) {
+
+        let response;
+
+        response = { text: member + " sen ne güzel yorumlar yazıyorsun", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("bəli") || lowerCaseComment.includes("beli")   ) {
+
+        let response;
+
+        response = { text: member + " sen ne güzel yorumlar yazıyorsun", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("adımı") || lowerCaseComment.includes("adimi")  ) {
+
+        let response;
+
+        response = { text: member + " adı ürekdir", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("su")   ) {
+
+        let response;
+
+        response = { text: member + " bilemedim seni gözüm tutmadı", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("gülmekden") || lowerCaseComment.includes("öldüm")  || lowerCaseComment.includes("gülməkdən")  ) {
+
+        let response;
+
+        response = { text: member + " seni güldüre bildimse ne mutlu bana", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+    if (lowerCaseComment.includes("haralisan") || lowerCaseComment.includes("haralısan") || lowerCaseComment.includes("nerelisin")  ) {
+
+        let response;
+
+        response = { text: member + " ben Oğuzluyum . Amma Azerbaycan bölünmez", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(userName)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
 });
 
 
@@ -626,35 +919,35 @@ connection.on('like', (data) => {
         { text: " hesabına her kes takip atsın", language: "tr" },
         { text: " sen daha iyilerine layıksın", language: "tr" },
         { text: " hayatımın anlamısın", language: "tr" },
-                { text: " eşk olsun sana", language: "tr" },
-            { text: " budu benimdi budu", language: "tr" },
+        { text: " eşk olsun sana", language: "tr" },
+        { text: " budu benimdi budu", language: "tr" },
         { text: " fikrim senin yanında", language: "tr" },
         { text: " sensin çare derdime", language: "tr" },
-               { text: " yahşılara salam olsun", language: "tr" },
+        { text: " yahşılara salam olsun", language: "tr" },
         { text: " mukurufunu koy yere", language: "tr" },
-            { text: " şaqmandı qaqam şaqman", language: "tr" },
+        { text: " şaqmandı qaqam şaqman", language: "tr" },
         { text: " senin adın ne ?", language: "tr" },
-         { text: " buzovum çok keşeydi", language: "tr" },
-           { text: "dilberim dilber ", language: "tr" },
-            { text: "ben sana biganelerden olmadim ki", language: "tr" },
-           { text: "hasretim ben sana deli gibi hasretim", language: "tr" },
-               { text: "başka rengte bakıyor gözlerin", language: "tr" },
-            { text: "dünya çok etibarsız", language: "tr" },
-                   { text: "ceklidi qaqam cekli", language: "tr" },
-               { text: "vot eta sovsem druqoy razqovor", language: "tr" },
-             { text: "derdine derman olaram", language: "tr" },
-              { text: "lezetli dvijenyalar", language: "tr" },
-             { text: "yığılır bradyaqalar", language: "tr" },
-             { text: "seveceyem sev desen", language: "tr" },
-                { text: "şappur şuppur beni öp", language: "tr" },
-                   { text: "bu sözleri tekrar edirik", language: "tr" },
-         { text: " dünya senin dünya benim dünya heç kimin", language: "tr" },
+        { text: " buzovum çok keşeydi", language: "tr" },
+        { text: "dilberim dilber ", language: "tr" },
+        { text: "ben sana biganelerden olmadim ki", language: "tr" },
+        { text: "hasretim ben sana deli gibi hasretim", language: "tr" },
+        { text: "başka rengte bakıyor gözlerin", language: "tr" },
+        { text: "dünya çok etibarsız", language: "tr" },
+        { text: "ceklidi qaqam cekli", language: "tr" },
+        { text: "vot eta sovsem druqoy razqovor", language: "tr" },
+        { text: "derdine derman olaram", language: "tr" },
+        { text: "lezetli dvijenyalar", language: "tr" },
+        { text: "yığılır bradyaqalar", language: "tr" },
+        { text: "seveceyem sev desen", language: "tr" },
+        { text: "şappur şuppur beni öp", language: "tr" },
+        { text: "bu sözleri tekrar edirik", language: "tr" },
+        { text: " dünya senin dünya benim dünya heç kimin", language: "tr" },
         { text: " nömre ezilib yoksa bufer?", language: "tr" },
         { text: " bakışın karşısısında çetin ki bir kes dayana", language: "tr" },
         { text: " cebinde ne kadar paran var?", language: "tr" },
         { text: " aşkından geberdiyim nasılsın?", language: "tr" },
         { text: " nerede yaşıyorsun?", language: "tr" },
-         { text: " sen gidenden sonra gün görmemişem", language: "tr" },
+        { text: " sen gidenden sonra gün görmemişem", language: "tr" },
         { text: " kaç yaşın var?", language: "tr" },
         { text: " seni kımışdıranı bulacam", language: "tr" },
         { text: " ne güzelsin", language: "tr" },
@@ -716,197 +1009,6 @@ window.addEventListener("load", async () => {
 });
 
 
-
-function addRandomMessage() {
-    const messages = [
-        { text: "Hepinize Teşekkür ederim", language: "tr" },
-        { text: "Bir birinize takip gönderin", language: "tr" },
-        { text: "mukrufunu yere koy", language: "tr" },
-        { text: "konuşmakdan yoruldum", language: "tr" },
-
-        { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
-        { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
-        { text: "Benim ondan gözüm su içmiyor", language: "tr" },
-        { text: "Canlını beğenen her kese takip gönderin", language: "tr" },
-        { text: "Arkadaşlarını davet eden her kese takip gönderin", language: "tr" },
-        { text: "Canlını paylaş", language: "tr" },
-        { text: "Benim kafam infakt geçirdi", language: "tr" },
-        { text: "ayaklarım kaşınıyor", language: "tr" },
-        { text: "huyn", language: "tr" },
-
-        { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
-
-        { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
-        { text: "barış ne yaptın sen", language: "tr" },
-        { text: "anam emele gelmez", language: "tr" },
-   
-        { text: "Benim kafam infakt geçirdi", language: "tr" },
-        { text: "Canlını paylaş", language: "tr" },
-        { text: "konuşmakdan yoruldum", language: "tr" },
-        { text: "ayaklarım kaşınıyor", language: "tr" },
-        { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
-        { text: "Halım yamandı ceyran", language: "tr" },
-        { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
-        { text: "Bir birinize takip gönderin", language: "tr" },
-        { text: "Arkadaşlarını davet eden her kese takip gönderin", language: "tr" },
-        { text: "Benim kafam infakt geçirdi", language: "tr" },
-
-        { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
-        { text: "Ekranı beğen adını söyleyim", language: "tr" },
-        { text: "Birlikte büyüyelim, beğen ve takip et", language: "tr" },
-        { text: "Topluluğa katıl, takip et ve etkileşime gir", language: "tr" },
-        { text: "Beğen ve yorum yap, karşılığında takip ederim", language: "tr" },
-        { text: "Bağlantıda kal, takip et ve paylaş", language: "tr" },
-        { text: "anam emele gelmez", language: "tr" },
-        { text: "ayaklarım kaşınıyor", language: "tr" },
-        { text: "mukrufunu yere koy", language: "tr" },
-
-        { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
-        { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
-        { text: "Benim ondan gözüm su içmiyor", language: "tr" },
-        { text: "konuşmakdan yoruldum", language: "tr" },
-        { text: "Bir birinize takip gönderin", language: "tr" },
-        { text: "Hesabımı takip eden son on kişiyi takip et", language: "tr" },
-        { text: "Kasıbların kadasını alım", language: "tr" },
-        { text: "Halım yamandı ceyran", language: "tr" },
-        { text: "Canlını beğenen her kese takip gönderin", language: "tr" },
-        { text: "Yayımı paylaşanlara takip gönderin", language: "tr" },
-        { text: "Arkadaşlarını davet eden her kese takip gönderin", language: "tr" },
-        { text: "anam emele gelmez", language: "tr" },
-        { text: "ayaklarım kaşınıyor", language: "tr" },
-        { text: "mukrufunu yere koy", language: "tr" },
-        { text: "Müthişsiniz, teşekkürler", language: "tr" },
-        { text: "Ekranı beğen adını söyleyim", language: "tr" },
-        { text: "neden uyumuyorsun arkadaş", language: "tr" },
-        { text: "otuz üç yaşım var", language: "tr" },
-        { text: "vaz sürenler ürekdi", language: "tr" },
-        { text: "Benim kafam infakt geçirdi", language: "tr" },
-
-        { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
-        { text: "Benim ondan gözüm su içmiyor", language: "tr" },
-        { text: "Yeni arkadaşlar keşfet, takip et ve etkileşime gir", language: "tr" },
-        { text: "ay kız bir dakika deyandaa", language: "tr" },
-        { text: "bardan kendime kız tapdım", language: "tr" },
-        { text: "Halım yamandı ceyran", language: "tr" },
-
-        { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
-        { text: "Bir birinize takip gönderin", language: "tr" },
-        { text: "Hesabımı takip eden son on kişiyi takip et", language: "tr" },
-        { text: "yapma onuuu", language: "tr" },
-        { text: "ay mikiiiiii", language: "tr" },
-        { text: "Yayımı paylaşanlara takip gönderin", language: "tr" },
-        { text: "Arkadaşlarını davet eden her kese takip gönderin", language: "tr" },
-        { text: "anam emele gelmez", language: "tr" },
-        { text: "hamidan güzel benim", language: "tr" },
-        { text: "mukrufunu yere koy", language: "tr" },
-        { text: "konuşmakdan yoruldum", language: "tr" },
-        { text: "Beğeni bırak, takipçi kazan", language: "tr" },
-        { text: "Hoşkedem kaybolmuş", language: "tr" },
-        { text: "Hoşkedem kaybolmuş", language: "tr" },
-
-        { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
-        { text: "Benim ondan gözüm su içmiyor", language: "tr" },
-        { text: "Benim kafam infakt geçirdi", language: "tr" },
-        { text: "ayaklarım kaşınıyor", language: "tr" },
-        { text: "Bağlan ve büyü, takip et ve destekle", language: "tr" },
-        { text: "Bir birinize takip gönderin", language: "tr" },
-        { text: "Hesabımı takip eden son on kişiyi takip et", language: "tr" },
-        { text: "Kasıbların kadasını alım", language: "tr" },
-        { text: "Halım yamandı ceyran", language: "tr" },
-        { text: "Hoşkedem kaybolmuş", language: "tr" },
-        { text: "Canlını beğenen her kese takip gönderin", language: "tr" },
-        { text: "Yayımı paylaşanlara takip gönderin", language: "tr" },
-
-        { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
-        { text: "Arkadaşlarını davet eden her kese takip gönderin", language: "tr" },
-        { text: "bir tane çay verirmisin?", language: "tr" },
-        { text: "herkes kaçışıyor", language: "tr" },
-        { text: "mukrufunu yere koy", language: "tr" },
-        { text: "konuşmakdan yoruldum", language: "tr" },
-        { text: "ayaklarım kaşınıyor", language: "tr" },
-        { text: "Hoşkedem kaybolmuş", language: "tr" },
-        { text: "Sohbete katıl, yorum yap ve takip et", language: "tr" },
-        { text: "Hoşkedem kaybolmuş", language: "tr" },
-        { text: "Halım yamandı ceyran", language: "tr" },
-        { text: "herkes kaçışıyor", language: "tr" },
-        { text: "mukrufunu yere koy", language: "tr" },
-        { text: "Hoşkedem kaybolmuş", language: "tr" },
-
-        { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
-        { text: "Benim kafam infakt geçirdi", language: "tr" },
-        { text: "Güncel kal, takip et ve bildirimleri aç", language: "tr" },
-        { text: "Takip et ve düşüncelerini paylaş", language: "tr" },
-        { text: "Bir birinize takip gönderin", language: "tr" },
-        { text: "Hesabımı takip eden son on kişiyi takip et", language: "tr" },
-        { text: "Kasıbların kadasını alım", language: "tr" },
-
-        { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
-        { text: "Benim ondan gözüm su içmiyor", language: "tr" },
-        { text: "Canlını beğenen her kese takip gönderin", language: "tr" },
-        { text: "Yayımı paylaşanlara takip gönderin", language: "tr" },
-        { text: "Arkadaşlarını davet eden her kese takip gönderin", language: "tr" },
-        { text: "herkes kaçışıyor", language: "tr" },
-        { text: "konuşmakdan yoruldum", language: "tr" },
-        { text: "mukrufunu yere koy", language: "tr" },
-
-        { text: "Karşılıklı destek için beğen ve yorum yap", language: "tr" },
-        { text: "Barış ne yaptın sen", language: "tr" },
-        { text: "Desteğiniz için teşekkür ederiz", language: "tr" },
-        { text: "Lütfen yayımı beyenin", language: "tr" },
-        { text: "ayaklarım kaşınıyor", language: "tr" },
-        { text: "Benim kafam infakt geçirdi", language: "tr" },
-        { text: "Hesabımı takip eden son on kişiyi takip et", language: "tr" },
-        { text: "Kasıbların kadasını alım", language: "tr" },
-
-        { text: "Kasıbların kadasını alım", language: "tr" },
-
-        { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
-        { text: "Benim ondan gözüm su içmiyor", language: "tr" },
-        { text: "Canlını beğenen her kese takip gönderin", language: "tr" },
-        { text: "Yayımı paylaşanlara takip gönderin", language: "tr" },
-        { text: "Arkadaşlarını davet eden her kese takip gönderin", language: "tr" },
-        { text: "herkes kaçışıyor", language: "tr" },
-        { text: "mukrufunu yere koy", language: "tr" },
-        { text: "Hoşkedem kaybolmuş", language: "tr" },
-        { text: "konuşmakdan yoruldum", language: "tr" },
-
-        { text: "Halım yamandı ceyran", language: "tr" },
-        { text: "Ucuz yerde ne ölümüm var benim", language: "tr" },
-        { text: "ayaklarım kaşınıyor", language: "tr" },
-        { text: "Ekranı beğen adını söyleyim", language: "tr" },
-        { text: "Burada herkes takipçi kazanacak", language: "tr" },
-        { text: "Ekranı beğen adını söyleyim", language: "tr" },
-        { text: "ayaklarım kaşınıyor", language: "tr" },
-
-        { text: "Kasıbların kadasını alım", language: "tr" },
-        { text: "Benim ondan gözüm su içmiyor", language: "tr" },
-        { text: "Hesabımı takip eden son on kişiyi takip et", language: "tr" },
-        { text: "Arkadaşlarını davet eden her kese takip gönderin", language: "tr" },
-        { text: "Bir birinize takip gönderin", language: "tr" },
-        { text: "Aktiv ol ve takipçi kazan", language: "tr" },
-        { text: "Halım yamandı ceyran", language: "tr" },
-        { text: "Ekranı beğen adını söyleyim", language: "tr" },
-        { text: "Benim kafam infakt geçirdi", language: "tr" },
-        { text: "ben deliyim", language: "tr" },
-        { text: "Hoşkedem kaybolmuş", language: "tr" },
-        { text: "Kasıbların kadasını alım", language: "tr" },
-
-        { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
-        { text: "Benim ondan gözüm su içmiyor", language: "tr" },
-        { text: "Canlını beğenen her kese takip gönderin", language: "tr" },
-        { text: "Yayımı paylaşanlara takip gönderin", language: "tr" },
-        { text: "herkes kaçışıyor", language: "tr" },
-        { text: "konuşmakdan yoruldum", language: "tr" },
-        { text: "ben deliyim", language: "tr" },
-
-    ];
-    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-
-    messagesQueue.push({ ...randomMessage, type: 'random' }); // type ekle
-    processQueue();
-}
-
-setInterval(addRandomMessage, 20000);
 
 
 function onEnd() {
