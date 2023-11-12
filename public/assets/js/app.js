@@ -458,23 +458,23 @@ connection.on('chat', async (data) => {
 
 
 
-    const bannedWords = ["pox", "cindir", "amciq", "got", "meme", "mal", "məmə", "dillaq", "dıllağ", "göt", "amcıq", "Bok", "am", "kahbe", "Qəhbə", "Qancıx", "Götveren", "pesi", "pes", "peyser", "peysər", "gijd"];
+    // const bannedWords = ["pox", "cindir", "amciq", "got", "meme", "mal", "məmə", "dillaq", "dıllağ", "göt", "amcıq", "Bok", "am", "kahbe", "Qəhbə", "Qancıx", "Götveren", "pesi", "pes", "peyser", "peysər", "gijd"];
 
-    let response;
+    // let response;
     
-    // Yorumu kelimelere ayır
-    const wordsInComment = lowerCaseComment.split(/\s+/);
+    // // Yorumu kelimelere ayır
+    // const wordsInComment = lowerCaseComment.split(/\s+/);
     
-    // Küfür kontrolü
-    if (wordsInComment.some(word => bannedWords.includes(word))) {
-        response = { text: member + ", lütfen küfür etme. sana yakışmadı.", language: "tr", type: 'warning' };
+    // // Küfür kontrolü
+    // if (wordsInComment.some(word => bannedWords.includes(word))) {
+    //     response = { text: member + ", lütfen küfür etme. sana yakışmadı.", language: "tr", type: 'warning' };
     
-        // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(member)) {
-            messagesQueue.push(response);
-            processQueue();
-        }
-    }
+    //     // Eğer uygun bir yanıt varsa, kuyruğa ekle
+    //     if (response && !usernames.has(member)) {
+    //         messagesQueue.push(response);
+    //         processQueue();
+    //     }
+    // }
     
     if (lowerCaseComment.includes("program") || lowerCaseComment.includes("programin") || lowerCaseComment.includes("programın")   || lowerCaseComment.includes("programi")   || lowerCaseComment.includes("programı")   ) {
 
@@ -552,6 +552,38 @@ connection.on('chat', async (data) => {
         }
 
     }
+
+    if (lowerCaseComment.includes("heri seni") ||  lowerCaseComment.includes("həri səni")      ) {
+
+        let response;
+
+        response = { text: member + " evet heri beni heri beni", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+
+    }
+
+    if (lowerCaseComment.includes("Azerbaycanlısan") ||  lowerCaseComment.includes("Azərbaycanlisan") ||  lowerCaseComment.includes("Azerbaycanlisan")      ) {
+
+        let response;
+
+        response = { text: member + " evet ben doğma büyüme azerbaycanlıyım", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
 
 
     if (lowerCaseComment.includes("qalirsan") || lowerCaseComment.includes("qalırsan")    ) {
