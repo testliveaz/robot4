@@ -456,6 +456,54 @@ connection.on('chat', async (data) => {
     }
 
 
+    if (lowerCaseComment.includes("69") || 
+    lowerCaseComment.includes("31") ||
+     lowerCaseComment.includes("dudus")  || 
+     lowerCaseComment.includes("caldiraram")  || 
+     lowerCaseComment.includes("minerem")  || 
+     lowerCaseComment.includes("got")  || 
+     lowerCaseComment.includes("it")  || 
+     lowerCaseComment.includes("məzə")  || 
+     lowerCaseComment.includes("meze")  || 
+     lowerCaseComment.includes("gic")  || 
+     lowerCaseComment.includes("donuz")  || 
+     lowerCaseComment.includes("pes")  || 
+     lowerCaseComment.includes("peyser")  || 
+     lowerCaseComment.includes("peysər")  || 
+     lowerCaseComment.includes("pesi")  || 
+     lowerCaseComment.includes("Götveren")  || 
+     lowerCaseComment.includes("Qancıx")  || 
+     lowerCaseComment.includes("Qəhbə")  || 
+     lowerCaseComment.includes("kahbe")  || 
+     lowerCaseComment.includes("Bok")  ||
+     lowerCaseComment.includes("amcıq")  || 
+     lowerCaseComment.includes("göt")  || 
+     lowerCaseComment.includes("dıllağ")  || 
+     lowerCaseComment.includes("dillaq")  || 
+     lowerCaseComment.includes("məmə")  || 
+     lowerCaseComment.includes("mal")  || 
+     lowerCaseComment.includes("meme")  || 
+     lowerCaseComment.includes("got")  || 
+     lowerCaseComment.includes("amciq")  || 
+     lowerCaseComment.includes("cindir")  || 
+     lowerCaseComment.includes("pox") 
+       ) {
+
+
+        let response;
+
+        response = { text: member + " lütfen küfür etme. sana yakışmadı.r", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+
+
 
 
     // const bannedWords = ["pox", "cindir", "amciq", "got", "meme", "mal", "məmə", "dillaq", "dıllağ", "göt", "amcıq", "Bok", "am", "kahbe", "Qəhbə", "Qancıx", "Götveren", "pesi", "pes", "peyser", "peysər", "gijd"];
