@@ -649,6 +649,148 @@ connection.on('chat', async (data) => {
 
     }
 
+    if (lowerCaseComment.includes("denen") || lowerCaseComment.includes("denən")) {
+        let response;
+        
+        // Remove specific words from data.comment
+        let filteredComment = data.comment.replace(/\b(denen|denən)\b/g, '');
+    
+        response = { text: member + filteredComment, language: "tr", type: 'like' };
+    
+        // If there is an appropriate response, add it to the queue
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("denen") || lowerCaseComment.includes("denən")) {
+        let response;
+        
+        // Remove specific words from data.comment
+        let filteredComment = data.comment.replace(/\b(denen|denən)\b/g, '');
+    
+        response = { text: member + filteredComment, language: "tr", type: 'like' };
+    
+        // If there is an appropriate response, add it to the queue
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    
+    
+
+    if (lowerCaseComment.includes("getdim") || lowerCaseComment.includes("getdime") || lowerCaseComment.includes("gitdim")) {
+        let response;
+        
+
+        response = { text: member + " hoşçakal yine bekliyoruz seni", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    
+
+    if (lowerCaseComment.includes("bekarsan") || lowerCaseComment.includes("bekarsane")) {
+        let response;
+        
+
+        response = { text: member + " ben bekar değilim evliyim otuz bir tane coçuğum var. on sekkizi seninle ayni yaşta", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("yaxşı?") || lowerCaseComment.includes("yaxşi?")  || lowerCaseComment.includes("yaxsi?") ) {
+        let response;
+        
+
+        response = { text: member + " yahşı aşkım başım üste", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    
+    
+    
+
+    if (lowerCaseComment.includes("gecen xeyre") || lowerCaseComment.includes("gecən xeyre") || lowerCaseComment.includes("gecən xeyrə") || lowerCaseComment.includes("gecəniz xeyrə")  || lowerCaseComment.includes("geceniz xeyre")) {
+        let response;
+        
+
+        response = { text: member + " hayra karşı uğur apar yine gel", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("nagil") || lowerCaseComment.includes("nagıl") || lowerCaseComment.includes("nağıl") ) {
+        let response;
+        
+
+        response = { text: member + " nağıl danışırsam sen uyurdun", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    
+
+    
+    if (lowerCaseComment.includes("aye")  ) {
+        let response;
+        
+
+        response = { text: member + " aye değilim ben Nerbala beyim", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    
+
+    if (lowerCaseComment.includes("adımı")  || lowerCaseComment.includes("adimi")   ) {
+
+        let response;
+
+        let filteredComment = data.comment.replace(/\b(adımı|adimi)\b/g, '');
+
+        response = { text: member +  filteredComment, language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+
+    }
+    
+
 
     if (lowerCaseComment.includes("qarşılıq") || lowerCaseComment.includes("takip") || lowerCaseComment.includes("karşılık")    || lowerCaseComment.includes("programı")   ) {
 
