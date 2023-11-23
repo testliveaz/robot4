@@ -681,7 +681,7 @@ connection.on('chat', async (data) => {
     
     
 
-    if (lowerCaseComment.includes("getdim") || lowerCaseComment.includes("getdime") || lowerCaseComment.includes("gitdim")) {
+    if (lowerCaseComment.includes("getdim") || lowerCaseComment.includes("getdime") || lowerCaseComment.includes("gitdim") || lowerCaseComment.includes("gedim")) {
         let response;
         
 
@@ -696,6 +696,784 @@ connection.on('chat', async (data) => {
     }
     
 
+    if (lowerCaseComment.includes("gelirem") || lowerCaseComment.includes("gellem") || lowerCaseComment.includes("gəlirəm") || lowerCaseComment.includes("gəlləm")) {
+        let response;
+        
+
+        response = { text: member + " tez gel dört gözle seni gozleyirem", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("konuşsana") || lowerCaseComment.includes("danış") || lowerCaseComment.includes("danis") || lowerCaseComment.includes("konussana")) {
+        let response;
+        
+
+        response = { text: member + " ne kadar danışayım sabahtan çenemin çüyü düştü", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    
+    
+
+    if (lowerCaseComment.includes("tapaq") || lowerCaseComment.includes("tapag") || lowerCaseComment.includes("tapax") ||  lowerCaseComment.includes("tapağ")) {
+        let response;
+        
+
+        response = { text: member + " nereden tapacağız?", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    
+
+    if (lowerCaseComment.includes("nerbala") || lowerCaseComment.includes("nərbala") ) {
+        let response;
+        
+
+        response = { text: member + " nerbala çok zeki ustadır", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    
+
+    if (lowerCaseComment.includes("deli") || lowerCaseComment.includes("dəli") ) {
+        let response;
+        
+
+        response = { text: member + " bana deli dedin beni üzdün", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("ürəysən") || lowerCaseComment.includes("ürəksən") || lowerCaseComment.includes("ureksen") || lowerCaseComment.includes("üreksen")) {
+        let response;
+        
+
+        response = { text: member + " sende üreksin canımın içi", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("para") || lowerCaseComment.includes("pul")  || lowerCaseComment.includes("qepik")  || lowerCaseComment.includes("qəpik") || lowerCaseComment.includes("qepik") ) {
+        let response;
+        
+
+        response = { text: member + " paran olmasada senin hörmetin bes eder", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    if (lowerCaseComment.includes("azzar")  ) {
+        let response;
+        
+
+        response = { text: member + " camahat bana üreyini veriyor sen bana azzar diyorsun ayıp", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("caniva derd") || lowerCaseComment.includes("canıva dərd") ) {
+        let response;
+        
+
+        response = { text: member + " camahat bana üreyini veriyor sen bana canıva derd diyorsun ayıp", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("unutdun") || lowerCaseComment.includes("unutma") ) {
+        let response;
+        
+
+        response = { text: member + " seni unutmam kadanalım sen benim üreyimdesin", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("brat") || lowerCaseComment.includes("bro")   ) {
+        let response;
+        
+
+        response = { text: member + " YIĞILIR BRADYAQALAR VESTi STRiMLYAQALAR", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("canli") || lowerCaseComment.includes("canlı")   ) {
+        let response;
+        
+
+        response = { text: member + " tiktokda bir canlı varsa oda benim canlımdır", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("noldu") || lowerCaseComment.includes("nolduu")  || lowerCaseComment.includes("ne oldu") || lowerCaseComment.includes("nə oldu")   ) {
+        let response;
+        
+
+        response = { text: member + " ne olacak birazcık priboy yaptım", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("vay")    ) {
+        let response;
+        
+
+        response = { text: member + " vay dedem vay", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("biraz")    ) {
+        let response;
+        
+
+        response = { text: member + " ne kadar biraz?", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("adim") || lowerCaseComment.includes("adim")     ) {
+        let response;
+        
+
+        response = { text: " senin adın" + member, language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    
+    if (lowerCaseComment.includes("tema") || lowerCaseComment.includes("temadı")   || lowerCaseComment.includes("temadi")  || lowerCaseComment.includes("temadiye")  || lowerCaseComment.includes("temadıye") ) {
+        let response;
+        
+
+        response = { text: member + " temada nedir sen daha ne hokkalar görüceksin", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("zordu")) {
+        let response;
+
+        response = { text: member + " teşekkür ederim benide terifleyen olurmuş", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("zordu")) {
+        let response;
+
+        response = { text: member + " ala dediğin için sana şiir okucam. Ala bula boz keçi", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    
+    if (lowerCaseComment.includes("eseblesdim") || lowerCaseComment.includes("eseblesdime")   || lowerCaseComment.includes("əsəbləşdim")     || lowerCaseComment.includes("əsəbləşdime")) {
+        let response;
+
+        response = { text: member + " kim esebleşdirdi seni ", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    if (lowerCaseComment.includes("😛") || lowerCaseComment.includes("😝")   || lowerCaseComment.includes("😜")     || lowerCaseComment.includes("🤑")) {
+        let response;
+
+        response = { text: member + "dilin dışarıda kalmış soyuk olur ", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    if (lowerCaseComment.includes("😃") || lowerCaseComment.includes("😄")   || lowerCaseComment.includes("😁") 
+        || owerCaseComment.includes("😆") || lowerCaseComment.includes("😅")   || lowerCaseComment.includes("😂") || lowerCaseComment.includes("🤣")) {
+        let response;
+
+        response = { text: member + " sen ne güzel gülüyorsun dişlerini hangi dokturda yaptırdın? ", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("😎")) {
+    let response;
+
+    response = { text: member + " açkilerinde güzelmiş ", language: "tr", type: 'like' };
+
+
+    // Eğer uygun bir yanıt varsa, kuyruğa ekle
+    if (response && !usernames.has(member)) {
+        messagesQueue.push(response);
+        processQueue();
+    }
+}
+
+if (lowerCaseComment.includes("😡")) {
+    let response;
+
+    response = { text: member + " banamı kızdın? ", language: "tr", type: 'like' };
+
+
+    // Eğer uygun bir yanıt varsa, kuyruğa ekle
+    if (response && !usernames.has(member)) {
+        messagesQueue.push(response);
+        processQueue();
+    }
+}
+
+if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
+    let response;
+
+    response = { text: member + " ne fikre getdin? ", language: "tr", type: 'like' };
+
+
+    // Eğer uygun bir yanıt varsa, kuyruğa ekle
+    if (response && !usernames.has(member)) {
+        messagesQueue.push(response);
+        processQueue();
+    }
+}
+
+    if (lowerCaseComment.includes("😞") || lowerCaseComment.includes("😔")   || lowerCaseComment.includes("😟") 
+    || owerCaseComment.includes("😕") || lowerCaseComment.includes("🙁")   || lowerCaseComment.includes("🙁") || lowerCaseComment.includes("😣")
+    || lowerCaseComment.includes("😫")   || lowerCaseComment.includes("😩") || lowerCaseComment.includes("🥺")
+    || lowerCaseComment.includes("😢")|| lowerCaseComment.includes("😭")) {
+    let response;
+
+    response = { text: member + " üzülme seni sevmeyenler üzülsün ", language: "tr", type: 'like' };
+
+
+    // Eğer uygun bir yanıt varsa, kuyruğa ekle
+    if (response && !usernames.has(member)) {
+        messagesQueue.push(response);
+        processQueue();
+    }
+}
+
+
+    if (lowerCaseComment.includes("zeher") || lowerCaseComment.includes("zəhər")  ) {
+        let response;
+        
+
+        response = { text: member + " camahat bana üreyini veriyor sen bana zeher diyorsun ayıp", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("salak") || lowerCaseComment.includes("koyun") || lowerCaseComment.includes("qoyun")   ) {
+        let response;
+        
+
+        response = { text: member + " be ne salağım ne de koyun senden akıllıyım", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("bilirsen") || lowerCaseComment.includes("bilirsən")   ) {
+        let response;
+        
+
+        response = { text: member + " ben her şeyi bilirim ama az danışıyorum", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("sevgilin")    ) {
+        let response;
+        
+
+        response = { text: member + " benim sevgilim yokki beni sevende yok", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("hardan")  || lowerCaseComment.includes("oxuyur")  ) {
+        let response;
+        
+
+        response = { text: member + " divara yazılar yazılmış oradan okuyorum", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("baci") || lowerCaseComment.includes("bacı")  || lowerCaseComment.includes("bajı")    ) {
+        let response;
+        
+
+        response = { text: member + " bacılar ay bacılar size kurban bacılar", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("qabil")   ) {
+        let response;
+        
+
+        response = { text: member + " kabil ürekdir ama insafsiz çok küfür ediyor", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("kişi") || lowerCaseComment.includes("kishi") || lowerCaseComment.includes("kisi")  ) {
+        let response;
+        
+
+        response = { text: member + " sen asıl kişisin", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("konusuyorsun") || lowerCaseComment.includes("konuşuyorsun")  ) {
+        let response;
+        
+
+        response = { text: member + " ne konuşacam ağlıma geleni serekliyorum", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    if (lowerCaseComment.includes("ne dedi") || lowerCaseComment.includes("nə dedi")  || lowerCaseComment.includes("nə deyir")   ) {
+        let response;
+        
+
+        response = { text: member + " iki saatdır boğazımı cırıyorum hala ne dedi diyor", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("cole cix") || lowerCaseComment.includes("çöle çıx")  ) {
+        let response;
+        
+
+        response = { text: member + " çöle çıxamam hava soyuk özün çık", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("boyun")   ) {
+        let response;
+        
+
+        response = { text: member + " benim boyum bir doksan ama iyirmi  çıkıldığında", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("mıkı") ||  lowerCaseComment.includes("miki") ) {
+        let response;
+        
+
+        response = { text: member + "şıkı şıkı dünya mıkı mıkı dünya", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("xosqedem") ||  lowerCaseComment.includes("xoşqədəm") ||  lowerCaseComment.includes("xoşqedem" )) {
+        let response;
+        
+
+        response = { text: member + "hoşkadem olmasa dayılar rusyetde keyf yapar", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("xosqedem") ||  lowerCaseComment.includes("xoşqədəm") ||  lowerCaseComment.includes("xoşqedem" )) {
+        let response;
+        
+
+        response = { text: member + "hoşkadem olmasa dayılar rusyetde keyf yapar", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("küsdüm") ||  lowerCaseComment.includes("kusdum")) {
+        let response;
+        
+
+        response = { text:  " küsme benden ay"  + member + "sevgi bu dünyanındır", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    
+    if (lowerCaseComment.includes("yekelende") ||  lowerCaseComment.includes("yekələndə")) {
+        let response;
+        
+
+        response = { text: member + " ben yekelende  haledenik dükkanı açacam", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("ermeni") ||  lowerCaseComment.includes("erməni") ) {
+        let response;
+        
+
+        response = { text: member + "ermenilerin ben gelmişini keçmişini bir yerden tanıyırum", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    
+    if (lowerCaseComment.includes("yasin") ||  lowerCaseComment.includes("yaşın") ) {
+        let response;
+        
+
+        response = { text: member + " 31 yaşım var 69 tevellüdem", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    if (lowerCaseComment.includes("cole cix") || lowerCaseComment.includes("çöle çıx")  ) {
+        let response;
+        
+
+        response = { text: member + " çöle çıxamam hava soyuk özün çık", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("hirslenecek") || lowerCaseComment.includes("hirslənəcək")  ) {
+        let response;
+        
+
+        response = { text: member + "  ben hırslandım divarları dağıdıb tökerim", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("şeytan") || lowerCaseComment.includes("seytan")  ) {
+        let response;
+        
+
+        response = { text: member + "  şeytanlar olmasa bizi kim yoldan çıkarır?", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("kesfet") || lowerCaseComment.includes("keşfet")  ) {
+        let response;
+        
+
+        response = { text: member + " keşfetden gelenlere kalbimi veririm", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    
+    if (lowerCaseComment.includes("acmışam")  ||  lowerCaseComment.includes("acıktım")) {
+        let response;
+        
+
+        response = { text: member + " açsansa burda ne geziyorsun gedib yemek yesene", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("sevmir") || lowerCaseComment.includes("sevmiyor")   ) {
+        let response;
+        
+
+        response = { text: member + " sende onu sevme başka adam yokmu?", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("heyat") ||  lowerCaseComment.includes("həyat") ) {
+        let response;
+        
+
+        response = { text: member + " heyat çok çetindir çocuklarıma bakamıyorum", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    if (lowerCaseComment.includes("reşad") || lowerCaseComment.includes("resad")     ) {
+        let response;
+        
+
+        response = { text: member + " helem reşad masallı olubdu kalma kallı", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("cay") || lowerCaseComment.includes("çay")    ) {
+        let response;
+        
+
+        response = { text: member + " çay falan yok çayhanamı burası?", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    if (lowerCaseComment.includes("ölsün") ||  lowerCaseComment.includes("ölsünn") ) {
+        let response;
+        
+
+        response = { text: member + " ölme daha gençsin karpuzda keseceyiz", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
     if (lowerCaseComment.includes("bekarsan") || lowerCaseComment.includes("bekarsane")) {
         let response;
         
@@ -884,7 +1662,7 @@ connection.on('chat', async (data) => {
 
     }
 
-    if (lowerCaseComment.includes("gülmekden") || lowerCaseComment.includes("öldüm")  || lowerCaseComment.includes("gülməkdən")  ) {
+    if (lowerCaseComment.includes("gülmekden") || lowerCaseComment.includes("öldüm")  || lowerCaseComment.includes("gülməkdən") || lowerCaseComment.includes("gülməkdən")  ) {
 
         let response;
 
