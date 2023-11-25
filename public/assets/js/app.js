@@ -83,7 +83,7 @@ let usernames = new Map();
 // START
 $(document).ready(() => {
     setTimeout(function () {
-        let targetLive = "zeworldlive";
+        let targetLive = "mirt_ses";
         connect(targetLive);
     }, 5000);
 
@@ -169,6 +169,8 @@ connection.on('chat', async (data) => {
 
         sonSesCalmaZamani[member] = simdi;
     }
+
+
     if (lowerCaseComment.includes("salam") || lowerCaseComment.includes("selam") || lowerCaseComment.includes("slm")) {
 
         let response;
@@ -180,7 +182,7 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
     if (lowerCaseComment.includes("necesen") || lowerCaseComment.includes("necəsən") || lowerCaseComment.includes("ncs") || lowerCaseComment.includes("nasilsin") || lowerCaseComment.includes("nasılsın") || lowerCaseComment.includes("necesən") || lowerCaseComment.includes("netersen") || lowerCaseComment.includes("nətərsən")) {
@@ -194,10 +196,10 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("qos") || lowerCaseComment.includes("qoş")  || lowerCaseComment.includes("nolar")) {
+    if (lowerCaseComment.includes("qos") || lowerCaseComment.includes("qoş") || lowerCaseComment.includes("nolar")) {
 
         let response;
 
@@ -208,10 +210,38 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
-    if (lowerCaseComment.includes("qurbağa") || lowerCaseComment.includes("qurbaga")  || lowerCaseComment.includes("kurbağa")  ) {
+    if (lowerCaseComment.includes("youtube")) {
+
+        let response;
+
+        response = { text: member + " yutubda ne men olduğum yerde?", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+
+    }
+    if (lowerCaseComment.includes("guya mirt") || lowerCaseComment.includes("guya mırt")) {
+
+        let response;
+
+        response = { text: member + " canlını mırt olduğunu düşünmüyorsan gide bilirsin yolun açık", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+
+    }
+    if (lowerCaseComment.includes("qurbağa") || lowerCaseComment.includes("qurbaga") || lowerCaseComment.includes("kurbağa")) {
 
         let response;
 
@@ -222,11 +252,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("canavar") ) {
+    if (lowerCaseComment.includes("canavar")) {
 
         let response;
 
@@ -237,11 +267,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("vehşi")  || lowerCaseComment.includes("vehsi")  || lowerCaseComment.includes("vəhsi")  || lowerCaseComment.includes("vəhşi")) {
+    if (lowerCaseComment.includes("vehşi") || lowerCaseComment.includes("vehsi") || lowerCaseComment.includes("vəhsi") || lowerCaseComment.includes("vəhşi")) {
 
         let response;
 
@@ -252,11 +282,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
-    
-    if (lowerCaseComment.includes("robot") ) {
+
+    if (lowerCaseComment.includes("robot")) {
 
         let response;
 
@@ -267,11 +297,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("oxu") || lowerCaseComment.includes("oxuda") || lowerCaseComment.includes("oxumur") ) {
+    if (lowerCaseComment.includes("oxu") || lowerCaseComment.includes("oxuda") || lowerCaseComment.includes("oxumur")) {
 
         let response;
 
@@ -282,12 +312,12 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
 
-    if (lowerCaseComment.includes("adın") || lowerCaseComment.includes("adin") || lowerCaseComment.includes("adın nedir") || lowerCaseComment.includes("adin nedir") ) {
+    if (lowerCaseComment.includes("adın") || lowerCaseComment.includes("adin") || lowerCaseComment.includes("adın nedir") || lowerCaseComment.includes("adin nedir")) {
 
         let response;
 
@@ -298,11 +328,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("bakı") || lowerCaseComment.includes("baki") ) {
+    if (lowerCaseComment.includes("bakı") || lowerCaseComment.includes("baki")) {
 
         let response;
 
@@ -313,12 +343,12 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    
-    if (lowerCaseComment.includes("sumqayit") || lowerCaseComment.includes("sumqayıt") ) {
+
+    if (lowerCaseComment.includes("sumqayit") || lowerCaseComment.includes("sumqayıt")) {
 
         let response;
 
@@ -329,11 +359,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("salamatciliq") || lowerCaseComment.includes("salamatçılıq") || lowerCaseComment.includes("salamatçiliq")  ) {
+    if (lowerCaseComment.includes("salamatciliq") || lowerCaseComment.includes("salamatçılıq") || lowerCaseComment.includes("salamatçiliq")) {
 
         let response;
 
@@ -344,11 +374,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("haralisan") || lowerCaseComment.includes("haralısan") || lowerCaseComment.includes("nerelisin")  ) {
+    if (lowerCaseComment.includes("haralisan") || lowerCaseComment.includes("haralısan") || lowerCaseComment.includes("nerelisin")) {
 
         let response;
 
@@ -359,11 +389,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("aşkım") || lowerCaseComment.includes("askim")  || lowerCaseComment.includes("aşkım")   ) {
+    if (lowerCaseComment.includes("aşkım") || lowerCaseComment.includes("askim") || lowerCaseComment.includes("aşkım")) {
 
         let response;
 
@@ -374,11 +404,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("gözel") || lowerCaseComment.includes("gözəl")   ) {
+    if (lowerCaseComment.includes("gözel") || lowerCaseComment.includes("gözəl")) {
 
         let response;
 
@@ -389,12 +419,12 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    
-    if (lowerCaseComment.includes("teşekkür")  ||  lowerCaseComment.includes("təşəkkür") ||  lowerCaseComment.includes("tsk")  ||  lowerCaseComment.includes("tşk")) {
+
+    if (lowerCaseComment.includes("teşekkür") || lowerCaseComment.includes("təşəkkür") || lowerCaseComment.includes("tsk") || lowerCaseComment.includes("tşk")) {
 
         let response;
 
@@ -405,11 +435,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("qorxdum")  ) {
+    if (lowerCaseComment.includes("qorxdum")) {
 
         let response;
 
@@ -420,12 +450,12 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    
-    if (lowerCaseComment.includes("ölürəm") || lowerCaseComment.includes("ölürem") || lowerCaseComment.includes("olurem") || lowerCaseComment.includes("ölurem")   ) {
+
+    if (lowerCaseComment.includes("ölürəm") || lowerCaseComment.includes("ölürem") || lowerCaseComment.includes("olurem") || lowerCaseComment.includes("ölurem")) {
 
         let response;
 
@@ -436,11 +466,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("naxcivan") || lowerCaseComment.includes("naxcıvan") || lowerCaseComment.includes("naxçıvan")    ) {
+    if (lowerCaseComment.includes("naxcivan") || lowerCaseComment.includes("naxcıvan") || lowerCaseComment.includes("naxçıvan")) {
 
         let response;
 
@@ -451,43 +481,43 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
 
-    if (lowerCaseComment.includes("69") || 
-    lowerCaseComment.includes("31") ||
-     lowerCaseComment.includes("dudus")  || 
-     lowerCaseComment.includes("caldiraram")  || 
-     lowerCaseComment.includes("minerem")  || 
-     lowerCaseComment.includes("got")  || 
-     lowerCaseComment.includes("it")  || 
-     lowerCaseComment.includes("məzə")  || 
-     lowerCaseComment.includes("meze")  || 
-     lowerCaseComment.includes("gic")  || 
-     lowerCaseComment.includes("donuz")  || 
-     lowerCaseComment.includes("pes")  || 
-     lowerCaseComment.includes("peyser")  || 
-     lowerCaseComment.includes("peysər")  || 
-     lowerCaseComment.includes("pesi")  || 
-     lowerCaseComment.includes("Götveren")  || 
-     lowerCaseComment.includes("Qancıx")  || 
-     lowerCaseComment.includes("Qəhbə")  || 
-     lowerCaseComment.includes("kahbe")  || 
-     lowerCaseComment.includes("Bok")  ||
-     lowerCaseComment.includes("amcıq")  || 
-     lowerCaseComment.includes("göt")  || 
-     lowerCaseComment.includes("dıllağ")  || 
-     lowerCaseComment.includes("dillaq")  || 
-     lowerCaseComment.includes("məmə")  || 
-     lowerCaseComment.includes("mal")  || 
-     lowerCaseComment.includes("meme")  || 
-     lowerCaseComment.includes("got")  || 
-     lowerCaseComment.includes("amciq")  || 
-     lowerCaseComment.includes("cindir")  || 
-     lowerCaseComment.includes("pox") 
-       ) {
+    if (lowerCaseComment.includes("69") ||
+        lowerCaseComment.includes("31") ||
+        lowerCaseComment.includes("dudus") ||
+        lowerCaseComment.includes("caldiraram") ||
+        lowerCaseComment.includes("minerem") ||
+        lowerCaseComment.includes("got") ||
+        lowerCaseComment.includes("it") ||
+        lowerCaseComment.includes("məzə") ||
+        lowerCaseComment.includes("meze") ||
+        lowerCaseComment.includes("gic") ||
+        lowerCaseComment.includes("donuz") ||
+        lowerCaseComment.includes("pes") ||
+        lowerCaseComment.includes("peyser") ||
+        lowerCaseComment.includes("peysər") ||
+        lowerCaseComment.includes("pesi") ||
+        lowerCaseComment.includes("Götveren") ||
+        lowerCaseComment.includes("Qancıx") ||
+        lowerCaseComment.includes("Qəhbə") ||
+        lowerCaseComment.includes("kahbe") ||
+        lowerCaseComment.includes("Bok") ||
+        lowerCaseComment.includes("amcıq") ||
+        lowerCaseComment.includes("göt") ||
+        lowerCaseComment.includes("dıllağ") ||
+        lowerCaseComment.includes("dillaq") ||
+        lowerCaseComment.includes("məmə") ||
+        lowerCaseComment.includes("mal") ||
+        lowerCaseComment.includes("meme") ||
+        lowerCaseComment.includes("got") ||
+        lowerCaseComment.includes("amciq") ||
+        lowerCaseComment.includes("cindir") ||
+        lowerCaseComment.includes("pox")
+    ) {
 
 
         let response;
@@ -499,32 +529,13 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
 
 
-
-    // const bannedWords = ["pox", "cindir", "amciq", "got", "meme", "mal", "məmə", "dillaq", "dıllağ", "göt", "amcıq", "Bok", "am", "kahbe", "Qəhbə", "Qancıx", "Götveren", "pesi", "pes", "peyser", "peysər", "gijd"];
-
-    // let response;
-    
-    // // Yorumu kelimelere ayır
-    // const wordsInComment = lowerCaseComment.split(/\s+/);
-    
-    // // Küfür kontrolü
-    // if (wordsInComment.some(word => bannedWords.includes(word))) {
-    //     response = { text: member + ", lütfen küfür etme. sana yakışmadı.", language: "tr", type: 'warning' };
-    
-    //     // Eğer uygun bir yanıt varsa, kuyruğa ekle
-    //     if (response && !usernames.has(member)) {
-    //         messagesQueue.push(response);
-    //         processQueue();
-    //     }
-    // }
-    
-    if (lowerCaseComment.includes("program") || lowerCaseComment.includes("programin") || lowerCaseComment.includes("programın")   || lowerCaseComment.includes("programi")   || lowerCaseComment.includes("programı")   ) {
+    if (lowerCaseComment.includes("program") || lowerCaseComment.includes("programin") || lowerCaseComment.includes("programın") || lowerCaseComment.includes("programi") || lowerCaseComment.includes("programı")) {
 
         let response;
 
@@ -535,12 +546,12 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
 
-    if (lowerCaseComment.includes("başı") || lowerCaseComment.includes("xarab")    ) {
+    if (lowerCaseComment.includes("başı") || lowerCaseComment.includes("xarab")) {
 
         let response;
 
@@ -551,14 +562,14 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
 
-       
-    
+
+
     }
 
-    if (lowerCaseComment.includes("uşağların") || lowerCaseComment.includes("uşağlarin")   || lowerCaseComment.includes("usaglarin")   ) {
+    if (lowerCaseComment.includes("uşağların") || lowerCaseComment.includes("uşağlarin") || lowerCaseComment.includes("usaglarin")) {
 
         let response;
 
@@ -569,10 +580,10 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
-    if (lowerCaseComment.includes("kafan güzel")    ) {
+    if (lowerCaseComment.includes("kafan güzel")) {
 
         let response;
 
@@ -583,10 +594,10 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
-    if (lowerCaseComment.includes("yatırsan?") ||  lowerCaseComment.includes("yatirsan?")   ||  lowerCaseComment.includes("yatirsan")   ||  lowerCaseComment.includes("yatırsan")     ) {
+    if (lowerCaseComment.includes("yatırsan?") || lowerCaseComment.includes("yatirsan?") || lowerCaseComment.includes("yatirsan") || lowerCaseComment.includes("yatırsan")) {
 
         let response;
 
@@ -597,11 +608,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("heri seni") ||  lowerCaseComment.includes("həri səni")      ) {
+    if (lowerCaseComment.includes("heri seni") || lowerCaseComment.includes("həri səni")) {
 
         let response;
 
@@ -612,12 +623,12 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
 
     }
 
-    if (lowerCaseComment.includes("Azerbaycanlısan") ||  lowerCaseComment.includes("Azərbaycanlisan") ||  lowerCaseComment.includes("Azerbaycanlisan")      ) {
+    if (lowerCaseComment.includes("Azerbaycanlısan") || lowerCaseComment.includes("Azərbaycanlisan") || lowerCaseComment.includes("Azerbaycanlisan")) {
 
         let response;
 
@@ -628,13 +639,13 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
 
 
-    if (lowerCaseComment.includes("qalirsan") || lowerCaseComment.includes("qalırsan")    ) {
+    if (lowerCaseComment.includes("qalirsan") || lowerCaseComment.includes("qalırsan")) {
 
         let response;
 
@@ -645,45 +656,45 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
     if (lowerCaseComment.includes("denen") || lowerCaseComment.includes("denən")) {
         let response;
-        
+
         // Remove specific words from data.comment
         let filteredComment = data.comment.replace(/\b(denen|denən)\b/g, '');
-    
+
         response = { text: member + filteredComment, language: "tr", type: 'like' };
-    
+
         // If there is an appropriate response, add it to the queue
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
     if (lowerCaseComment.includes("denen") || lowerCaseComment.includes("denən")) {
         let response;
-        
+
         // Remove specific words from data.comment
         let filteredComment = data.comment.replace(/\b(denen|denən)\b/g, '');
-    
+
         response = { text: member + filteredComment, language: "tr", type: 'like' };
-    
+
         // If there is an appropriate response, add it to the queue
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    
-    
+
+
 
     if (lowerCaseComment.includes("getdim") || lowerCaseComment.includes("getdime") || lowerCaseComment.includes("gitdim") || lowerCaseComment.includes("gedim")) {
         let response;
-        
+
 
         response = { text: member + " hoşçakal yine bekliyoruz seni", language: "tr", type: 'like' };
 
@@ -692,13 +703,13 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    
+
 
     if (lowerCaseComment.includes("gelirem") || lowerCaseComment.includes("gellem") || lowerCaseComment.includes("gəlirəm") || lowerCaseComment.includes("gəlləm")) {
         let response;
-        
+
 
         response = { text: member + " tez gel dört gözle seni gozleyirem", language: "tr", type: 'like' };
 
@@ -707,12 +718,12 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
     if (lowerCaseComment.includes("konuşsana") || lowerCaseComment.includes("danış") || lowerCaseComment.includes("danis") || lowerCaseComment.includes("konussana")) {
         let response;
-        
+
 
         response = { text: member + " ne kadar danışayım sabahtan çenemin çüyü düştü", language: "tr", type: 'like' };
 
@@ -721,14 +732,60 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    
-    
 
-    if (lowerCaseComment.includes("tapaq") || lowerCaseComment.includes("tapag") || lowerCaseComment.includes("tapax") ||  lowerCaseComment.includes("tapağ")) {
+
+    if (lowerCaseComment.includes("qiymetin") || lowerCaseComment.includes("qiymətin")) {
         let response;
-        
+
+
+        response = { text: member + " bana rüşvetmi teklif ediyorsun?", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+
+
+
+    if (lowerCaseComment.includes("yorulma") || lowerCaseComment.includes("yorulmayasan")) {
+        let response;
+
+
+        response = { text: member + "sağol üreyim sende yorulmayasan", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+
+
+    if (lowerCaseComment.includes("mauqli")) {
+        let response;
+
+
+        response = { text: member + "mauqlidi kakam mauqli", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+
+
+
+    if (lowerCaseComment.includes("tapaq") || lowerCaseComment.includes("tapag") || lowerCaseComment.includes("tapax") || lowerCaseComment.includes("tapağ")) {
+        let response;
+
 
         response = { text: member + " nereden tapacağız?", language: "tr", type: 'like' };
 
@@ -737,13 +794,13 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    
 
-    if (lowerCaseComment.includes("nerbala") || lowerCaseComment.includes("nərbala") ) {
+
+    if (lowerCaseComment.includes("nerbala") || lowerCaseComment.includes("nərbala")) {
         let response;
-        
+
 
         response = { text: member + " nerbala çok zeki ustadır", language: "tr", type: 'like' };
 
@@ -752,13 +809,13 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    
 
-    if (lowerCaseComment.includes("deli") || lowerCaseComment.includes("dəli") ) {
+
+    if (lowerCaseComment.includes("deli") || lowerCaseComment.includes("dəli")) {
         let response;
-        
+
 
         response = { text: member + " bana deli dedin beni üzdün", language: "tr", type: 'like' };
 
@@ -767,12 +824,41 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
+    }
+
+
+    if (lowerCaseComment.includes("kimsen") || lowerCaseComment.includes("kimsən")) {
+        let response;
+
+
+        response = { text: member + " ben nerbalayım nerbala", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+
+    if (lowerCaseComment.includes("balaeli") || lowerCaseComment.includes("balaəli")) {
+        let response;
+
+
+        response = { text: member + " renci qaraja salmışam biraz qeydine kalmışam", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
     }
 
     if (lowerCaseComment.includes("ürəysən") || lowerCaseComment.includes("ürəksən") || lowerCaseComment.includes("ureksen") || lowerCaseComment.includes("üreksen")) {
         let response;
-        
+
 
         response = { text: member + " sende üreksin canımın içi", language: "tr", type: 'like' };
 
@@ -781,13 +867,13 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    if (lowerCaseComment.includes("para") || lowerCaseComment.includes("pul")  || lowerCaseComment.includes("qepik")  || lowerCaseComment.includes("qəpik") || lowerCaseComment.includes("qepik") ) {
+    if (lowerCaseComment.includes("para") || lowerCaseComment.includes("pul") || lowerCaseComment.includes("qepik") || lowerCaseComment.includes("qəpik") || lowerCaseComment.includes("qepik")) {
         let response;
-        
+
 
         response = { text: member + " paran olmasada senin hörmetin bes eder", language: "tr", type: 'like' };
 
@@ -796,11 +882,11 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    if (lowerCaseComment.includes("azzar")  ) {
+    if (lowerCaseComment.includes("azzar")) {
         let response;
-        
+
 
         response = { text: member + " camahat bana üreyini veriyor sen bana azzar diyorsun ayıp", language: "tr", type: 'like' };
 
@@ -809,12 +895,12 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("caniva derd") || lowerCaseComment.includes("canıva dərd") ) {
+    if (lowerCaseComment.includes("caniva derd") || lowerCaseComment.includes("canıva dərd")) {
         let response;
-        
+
 
         response = { text: member + " camahat bana üreyini veriyor sen bana canıva derd diyorsun ayıp", language: "tr", type: 'like' };
 
@@ -823,12 +909,12 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("unutdun") || lowerCaseComment.includes("unutma") ) {
+    if (lowerCaseComment.includes("unutdun") || lowerCaseComment.includes("unutma")) {
         let response;
-        
+
 
         response = { text: member + " seni unutmam kadanalım sen benim üreyimdesin", language: "tr", type: 'like' };
 
@@ -837,13 +923,13 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    if (lowerCaseComment.includes("brat") || lowerCaseComment.includes("bro")   ) {
+    if (lowerCaseComment.includes("brat") || lowerCaseComment.includes("bro")) {
         let response;
-        
+
 
         response = { text: member + "bratva yığılır bradyakalar vesti sitrimyakalar", language: "tr", type: 'like' };
 
@@ -852,12 +938,12 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("canli") || lowerCaseComment.includes("canlı")   ) {
+    if (lowerCaseComment.includes("canli") || lowerCaseComment.includes("canlı")) {
         let response;
-        
+
 
         response = { text: member + " tiktokda bir canlı varsa oda benim canlımdır", language: "tr", type: 'like' };
 
@@ -866,13 +952,13 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    if (lowerCaseComment.includes("noldu") || lowerCaseComment.includes("nolduu")  || lowerCaseComment.includes("ne oldu") || lowerCaseComment.includes("nə oldu")   ) {
+    if (lowerCaseComment.includes("noldu") || lowerCaseComment.includes("nolduu") || lowerCaseComment.includes("ne oldu") || lowerCaseComment.includes("nə oldu")) {
         let response;
-        
+
 
         response = { text: member + " ne olacak birazcık priboy yaptım", language: "tr", type: 'like' };
 
@@ -881,13 +967,13 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    if (lowerCaseComment.includes("vay")    ) {
+    if (lowerCaseComment.includes("vay")) {
         let response;
-        
+
 
         response = { text: member + " vay dedem vay", language: "tr", type: 'like' };
 
@@ -896,13 +982,13 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    if (lowerCaseComment.includes("biraz")    ) {
+    if (lowerCaseComment.includes("biraz")) {
         let response;
-        
+
 
         response = { text: member + " ne kadar biraz?", language: "tr", type: 'like' };
 
@@ -911,13 +997,13 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    if (lowerCaseComment.includes("adim") || lowerCaseComment.includes("adim")     ) {
+    if (lowerCaseComment.includes("adim") || lowerCaseComment.includes("adim")) {
         let response;
-        
+
 
         response = { text: " senin adın" + member, language: "tr", type: 'like' };
 
@@ -926,12 +1012,12 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    
-    if (lowerCaseComment.includes("tema") || lowerCaseComment.includes("temadı")   || lowerCaseComment.includes("temadi")  || lowerCaseComment.includes("temadiye")  || lowerCaseComment.includes("temadıye") ) {
+
+    if (lowerCaseComment.includes("tema") || lowerCaseComment.includes("temadı") || lowerCaseComment.includes("temadi") || lowerCaseComment.includes("temadiye") || lowerCaseComment.includes("temadıye")) {
         let response;
-        
+
 
         response = { text: member + " temada nedir sen daha ne hokkalar görüceksin", language: "tr", type: 'like' };
 
@@ -940,7 +1026,7 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
     if (lowerCaseComment.includes("zordu")) {
@@ -953,7 +1039,7 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
     if (lowerCaseComment.includes("zordu")) {
@@ -966,10 +1052,10 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    
-    if (lowerCaseComment.includes("eseblesdim") || lowerCaseComment.includes("eseblesdime")   || lowerCaseComment.includes("əsəbləşdim")     || lowerCaseComment.includes("əsəbləşdime")) {
+
+    if (lowerCaseComment.includes("eseblesdim") || lowerCaseComment.includes("eseblesdime") || lowerCaseComment.includes("əsəbləşdim") || lowerCaseComment.includes("əsəbləşdime")) {
         let response;
 
         response = { text: member + " kim esebleşdirdi seni ", language: "tr", type: 'like' };
@@ -979,9 +1065,9 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    if (lowerCaseComment.includes("😛") || lowerCaseComment.includes("😝")   || lowerCaseComment.includes("😜")     || lowerCaseComment.includes("🤑")) {
+    if (lowerCaseComment.includes("😛") || lowerCaseComment.includes("😝") || lowerCaseComment.includes("😜") || lowerCaseComment.includes("🤑")) {
         let response;
 
         response = { text: member + "dilin dışarıda kalmış soyuk olur ", language: "tr", type: 'like' };
@@ -991,10 +1077,10 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    if (lowerCaseComment.includes("😃") || lowerCaseComment.includes("😄")   || lowerCaseComment.includes("😁") 
-        || owerCaseComment.includes("😆") || lowerCaseComment.includes("😅")   || lowerCaseComment.includes("😂") || lowerCaseComment.includes("🤣")) {
+    if (lowerCaseComment.includes("😃") || lowerCaseComment.includes("😄") || lowerCaseComment.includes("😁")
+        || owerCaseComment.includes("😆") || lowerCaseComment.includes("😅") || lowerCaseComment.includes("😂") || lowerCaseComment.includes("🤣")) {
         let response;
 
         response = { text: member + " sen ne güzel gülüyorsun dişlerini hangi dokturda yaptırdın? ", language: "tr", type: 'like' };
@@ -1004,68 +1090,68 @@ connection.on('chat', async (data) => {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
     if (lowerCaseComment.includes("😎")) {
-    let response;
-
-    response = { text: member + " açkilerinde güzelmiş ", language: "tr", type: 'like' };
-
-
-    // Eğer uygun bir yanıt varsa, kuyruğa ekle
-    if (response && !usernames.has(member)) {
-        messagesQueue.push(response);
-        processQueue();
-    }
-}
-
-if (lowerCaseComment.includes("😡")) {
-    let response;
-
-    response = { text: member + " banamı kızdın? ", language: "tr", type: 'like' };
-
-
-    // Eğer uygun bir yanıt varsa, kuyruğa ekle
-    if (response && !usernames.has(member)) {
-        messagesQueue.push(response);
-        processQueue();
-    }
-}
-
-if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
-    let response;
-
-    response = { text: member + " ne fikre getdin? ", language: "tr", type: 'like' };
-
-
-    // Eğer uygun bir yanıt varsa, kuyruğa ekle
-    if (response && !usernames.has(member)) {
-        messagesQueue.push(response);
-        processQueue();
-    }
-}
-
-    if (lowerCaseComment.includes("😞") || lowerCaseComment.includes("😔")   || lowerCaseComment.includes("😟") 
-    || owerCaseComment.includes("😕") || lowerCaseComment.includes("🙁")   || lowerCaseComment.includes("🙁") || lowerCaseComment.includes("😣")
-    || lowerCaseComment.includes("😫")   || lowerCaseComment.includes("😩") || lowerCaseComment.includes("🥺")
-    || lowerCaseComment.includes("😢")|| lowerCaseComment.includes("😭")) {
-    let response;
-
-    response = { text: member + " üzülme seni sevmeyenler üzülsün ", language: "tr", type: 'like' };
-
-
-    // Eğer uygun bir yanıt varsa, kuyruğa ekle
-    if (response && !usernames.has(member)) {
-        messagesQueue.push(response);
-        processQueue();
-    }
-}
-
-
-    if (lowerCaseComment.includes("zeher") || lowerCaseComment.includes("zəhər")  ) {
         let response;
-        
+
+        response = { text: member + " açkilerinde güzelmiş ", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("😡")) {
+        let response;
+
+        response = { text: member + " banamı kızdın? ", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
+        let response;
+
+        response = { text: member + " ne fikre getdin? ", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("😞") || lowerCaseComment.includes("😔") || lowerCaseComment.includes("😟")
+        || owerCaseComment.includes("😕") || lowerCaseComment.includes("🙁") || lowerCaseComment.includes("🙁") || lowerCaseComment.includes("😣")
+        || lowerCaseComment.includes("😫") || lowerCaseComment.includes("😩") || lowerCaseComment.includes("🥺")
+        || lowerCaseComment.includes("😢") || lowerCaseComment.includes("😭")) {
+        let response;
+
+        response = { text: member + " üzülme seni sevmeyenler üzülsün ", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+
+    if (lowerCaseComment.includes("zeher") || lowerCaseComment.includes("zəhər")) {
+        let response;
+
 
         response = { text: member + " camahat bana üreyini veriyor sen bana zeher diyorsun ayıp", language: "tr", type: 'like' };
 
@@ -1074,13 +1160,13 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    if (lowerCaseComment.includes("salak") || lowerCaseComment.includes("koyun") || lowerCaseComment.includes("qoyun")   ) {
+    if (lowerCaseComment.includes("salak") || lowerCaseComment.includes("koyun") || lowerCaseComment.includes("qoyun")) {
         let response;
-        
+
 
         response = { text: member + " be ne salağım ne de koyun senden akıllıyım", language: "tr", type: 'like' };
 
@@ -1089,13 +1175,13 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    if (lowerCaseComment.includes("bilirsen") || lowerCaseComment.includes("bilirsən")   ) {
+    if (lowerCaseComment.includes("bilirsen") || lowerCaseComment.includes("bilirsən")) {
         let response;
-        
+
 
         response = { text: member + " ben her şeyi bilirim ama az danışıyorum", language: "tr", type: 'like' };
 
@@ -1104,13 +1190,13 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    if (lowerCaseComment.includes("sevgilin")    ) {
+    if (lowerCaseComment.includes("sevgilin")) {
         let response;
-        
+
 
         response = { text: member + " benim sevgilim yokki beni sevende yok", language: "tr", type: 'like' };
 
@@ -1119,12 +1205,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("hardan")  || lowerCaseComment.includes("oxuyur")  ) {
+    if (lowerCaseComment.includes("hardan") || lowerCaseComment.includes("oxuyur")) {
         let response;
-        
+
 
         response = { text: member + " divara yazılar yazılmış oradan okuyorum", language: "tr", type: 'like' };
 
@@ -1133,12 +1219,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("baci") || lowerCaseComment.includes("bacı")  || lowerCaseComment.includes("bajı")    ) {
+    if (lowerCaseComment.includes("baci") || lowerCaseComment.includes("bacı") || lowerCaseComment.includes("bajı")) {
         let response;
-        
+
 
         response = { text: member + " bacılar ay bacılar size kurban bacılar", language: "tr", type: 'like' };
 
@@ -1147,12 +1233,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("qabil")   ) {
+    if (lowerCaseComment.includes("qabil")) {
         let response;
-        
+
 
         response = { text: member + " kabil ürekdir ama insafsiz çok küfür ediyor", language: "tr", type: 'like' };
 
@@ -1161,12 +1247,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("kişi") || lowerCaseComment.includes("kishi") || lowerCaseComment.includes("kisi")  ) {
+    if (lowerCaseComment.includes("kişi") || lowerCaseComment.includes("kishi") || lowerCaseComment.includes("kisi")) {
         let response;
-        
+
 
         response = { text: member + " sen asıl kişisin", language: "tr", type: 'like' };
 
@@ -1175,13 +1261,13 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    if (lowerCaseComment.includes("konusuyorsun") || lowerCaseComment.includes("konuşuyorsun")  ) {
+    if (lowerCaseComment.includes("konusuyorsun") || lowerCaseComment.includes("konuşuyorsun")) {
         let response;
-        
+
 
         response = { text: member + " ne konuşacam ağlıma geleni serekliyorum", language: "tr", type: 'like' };
 
@@ -1190,11 +1276,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    if (lowerCaseComment.includes("ne dedi") || lowerCaseComment.includes("nə dedi")  || lowerCaseComment.includes("nə deyir")  || lowerCaseComment.includes("nə dir")  || lowerCaseComment.includes("ne diyir") || lowerCaseComment.includes("ne diir")   ) {
+    if (lowerCaseComment.includes("ne dedi") || lowerCaseComment.includes("nə dedi") || lowerCaseComment.includes("nə deyir") || lowerCaseComment.includes("nə dir") || lowerCaseComment.includes("ne diyir") || lowerCaseComment.includes("ne diir")) {
         let response;
-        
+
 
         response = { text: member + " iki saatdır boğazımı cırıyorum hala ne dedi diyor", language: "tr", type: 'like' };
 
@@ -1203,12 +1289,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("cole cix") || lowerCaseComment.includes("çöle çıx")  ) {
+    if (lowerCaseComment.includes("cole cix") || lowerCaseComment.includes("çöle çıx")) {
         let response;
-        
+
 
         response = { text: member + " çöle çıxamam hava soyuk özün çık", language: "tr", type: 'like' };
 
@@ -1217,12 +1303,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("qardasim") || lowerCaseComment.includes("qardaşım")   || lowerCaseComment.includes("qardasim") ) {
+    if (lowerCaseComment.includes("qardasim") || lowerCaseComment.includes("qardaşım") || lowerCaseComment.includes("qardasim")) {
         let response;
-        
+
 
         response = { text: member + " qardaşın nerbala  afrikada banan yiyiyor", language: "tr", type: 'like' };
 
@@ -1231,12 +1317,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("afrika")  ) {
+    if (lowerCaseComment.includes("afrika")) {
         let response;
-        
+
 
         response = { text: member + "afrikada vaziyyet  zordur", language: "tr", type: 'like' };
 
@@ -1245,11 +1331,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    if (lowerCaseComment.includes("boyun")   ) {
+    if (lowerCaseComment.includes("boyun")) {
         let response;
-        
+
 
         response = { text: member + " benim boyum bir doksan ama iyirmi  çıkıldığında", language: "tr", type: 'like' };
 
@@ -1258,12 +1344,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("mıkı") ||  lowerCaseComment.includes("miki") ) {
+    if (lowerCaseComment.includes("mıkı") || lowerCaseComment.includes("miki")) {
         let response;
-        
+
 
         response = { text: member + "şıkı şıkı dünya mıkı mıkı dünya", language: "tr", type: 'like' };
 
@@ -1272,12 +1358,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("xosqedem") ||  lowerCaseComment.includes("xoşqədəm") ||  lowerCaseComment.includes("xoşqedem" )) {
+    if (lowerCaseComment.includes("xosqedem") || lowerCaseComment.includes("xoşqədəm") || lowerCaseComment.includes("xoşqedem")) {
         let response;
-        
+
 
         response = { text: member + "hoşkadem olmasa dayılar rusyetde keyf yapar", language: "tr", type: 'like' };
 
@@ -1286,12 +1372,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("xosqedem") ||  lowerCaseComment.includes("xoşqədəm") ||  lowerCaseComment.includes("xoşqedem" )) {
+    if (lowerCaseComment.includes("xosqedem") || lowerCaseComment.includes("xoşqədəm") || lowerCaseComment.includes("xoşqedem")) {
         let response;
-        
+
 
         response = { text: member + "hoşkadem olmasa dayılar rusyetde keyf yapar", language: "tr", type: 'like' };
 
@@ -1300,27 +1386,27 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("küsdüm") ||  lowerCaseComment.includes("kusdum")) {
+    if (lowerCaseComment.includes("küsdüm") || lowerCaseComment.includes("kusdum")) {
         let response;
-        
 
-        response = { text:  " küsme benden ay"  + member + "sevgi bu dünyanındır", language: "tr", type: 'like' };
+
+        response = { text: " küsme benden ay" + member + "sevgi bu dünyanındır", language: "tr", type: 'like' };
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    
-    if (lowerCaseComment.includes("yekelende") ||  lowerCaseComment.includes("yekələndə")) {
+
+    if (lowerCaseComment.includes("yekelende") || lowerCaseComment.includes("yekələndə")) {
         let response;
-        
+
 
         response = { text: member + " ben yekelende  haledenik dükkanı açacam", language: "tr", type: 'like' };
 
@@ -1329,12 +1415,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("ermeni") ||  lowerCaseComment.includes("erməni") ) {
+    if (lowerCaseComment.includes("ermeni") || lowerCaseComment.includes("erməni")) {
         let response;
-        
+
 
         response = { text: member + "ermenilerin ben gelmişini keçmişini bir yerden tanıyırum", language: "tr", type: 'like' };
 
@@ -1343,14 +1429,14 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    
-    if (lowerCaseComment.includes("yasin") ||  lowerCaseComment.includes("yaşın") ) {
+
+    if (lowerCaseComment.includes("yasin") || lowerCaseComment.includes("yaşın")) {
         let response;
-        
+
 
         response = { text: member + " 31 yaşım var 69 tevellüdem", language: "tr", type: 'like' };
 
@@ -1359,11 +1445,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    if (lowerCaseComment.includes("cole cix") || lowerCaseComment.includes("çöle çıx")  ) {
+    if (lowerCaseComment.includes("cole cix") || lowerCaseComment.includes("çöle çıx")) {
         let response;
-        
+
 
         response = { text: member + " çöle çıxamam hava soyuk özün çık", language: "tr", type: 'like' };
 
@@ -1372,12 +1458,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("hirslenecek") || lowerCaseComment.includes("hirslənəcək")  ) {
+    if (lowerCaseComment.includes("hirslenecek") || lowerCaseComment.includes("hirslənəcək")) {
         let response;
-        
+
 
         response = { text: member + "  ben hırslandım divarları dağıdıb tökerim", language: "tr", type: 'like' };
 
@@ -1386,12 +1472,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("şeytan") || lowerCaseComment.includes("seytan")  ) {
+    if (lowerCaseComment.includes("şeytan") || lowerCaseComment.includes("seytan")) {
         let response;
-        
+
 
         response = { text: member + "  şeytanlar olmasa bizi kim yoldan çıkarır?", language: "tr", type: 'like' };
 
@@ -1400,12 +1486,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("kesfet") || lowerCaseComment.includes("keşfet")  ) {
+    if (lowerCaseComment.includes("kesfet") || lowerCaseComment.includes("keşfet")) {
         let response;
-        
+
 
         response = { text: member + " keşfetden gelenlere kalbimi veririm", language: "tr", type: 'like' };
 
@@ -1414,14 +1500,14 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    
-    if (lowerCaseComment.includes("acmışam")  ||  lowerCaseComment.includes("acıktım")) {
+
+    if (lowerCaseComment.includes("acmışam") || lowerCaseComment.includes("acıktım")) {
         let response;
-        
+
 
         response = { text: member + " açsansa burda ne geziyorsun gedib yemek yesene", language: "tr", type: 'like' };
 
@@ -1430,13 +1516,13 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
 
-    if (lowerCaseComment.includes("sevmir") || lowerCaseComment.includes("sevmiyor")   ) {
+    if (lowerCaseComment.includes("sevmir") || lowerCaseComment.includes("sevmiyor")) {
         let response;
-        
+
 
         response = { text: member + " sende onu sevme başka adam yokmu?", language: "tr", type: 'like' };
 
@@ -1445,12 +1531,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("heyat") ||  lowerCaseComment.includes("həyat") ) {
+    if (lowerCaseComment.includes("heyat") || lowerCaseComment.includes("həyat")) {
         let response;
-        
+
 
         response = { text: member + " heyat çok çetindir çocuklarıma bakamıyorum", language: "tr", type: 'like' };
 
@@ -1459,11 +1545,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    if (lowerCaseComment.includes("reşad") || lowerCaseComment.includes("resad")     ) {
+    if (lowerCaseComment.includes("reşad") || lowerCaseComment.includes("resad")) {
         let response;
-        
+
 
         response = { text: member + " helem reşad masallı olubdu kalma kallı", language: "tr", type: 'like' };
 
@@ -1472,12 +1558,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("cay") || lowerCaseComment.includes("çay")    ) {
+    if (lowerCaseComment.includes("cay") || lowerCaseComment.includes("çay")) {
         let response;
-        
+
 
         response = { text: member + " çay falan yok çayhanamı burası?", language: "tr", type: 'like' };
 
@@ -1486,11 +1572,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    if (lowerCaseComment.includes("ölsün") ||  lowerCaseComment.includes("ölsünn") ) {
+    if (lowerCaseComment.includes("ölsün") || lowerCaseComment.includes("ölsünn")) {
         let response;
-        
+
 
         response = { text: member + " ölme daha gençsin karpuzda keseceyiz", language: "tr", type: 'like' };
 
@@ -1499,11 +1585,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
     if (lowerCaseComment.includes("bekarsan") || lowerCaseComment.includes("bekarsane")) {
         let response;
-        
+
 
         response = { text: member + " ben bekar değilim evliyim otuz bir tane coçuğum var. on sekkizi seninle ayni yaşta", language: "tr", type: 'like' };
 
@@ -1512,13 +1598,13 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    
-    if (lowerCaseComment.includes("saymır")||lowerCaseComment.includes("saymir")  ) {
+
+    if (lowerCaseComment.includes("saymır") || lowerCaseComment.includes("saymir")) {
         let response;
-        
+
 
         response = { text: member + " seni her zaman saydım kadrimi bilmedin", language: "tr", type: 'like' };
 
@@ -1527,11 +1613,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    if (lowerCaseComment.includes("meyve")||lowerCaseComment.includes("meyvə")  ) {
+    if (lowerCaseComment.includes("meyve") || lowerCaseComment.includes("meyvə")) {
         let response;
-        
+
 
         response = { text: member + " uça bilseydim afrikaya uçardım", language: "tr", type: 'like' };
 
@@ -1540,12 +1626,27 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("şeir")||lowerCaseComment.includes("seir") ||lowerCaseComment.includes("şeyir")  ) {
+    if (lowerCaseComment.includes("bağışla") || lowerCaseComment.includes("bagisla")) {
         let response;
-        
+
+
+        response = { text: member + " seni bağışladım", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+
+
+    if (lowerCaseComment.includes("şeir") || lowerCaseComment.includes("seir") || lowerCaseComment.includes("şeyir")) {
+        let response;
+
 
         response = { text: member + "evet ben şeyir biliyorum ala bula boz keçi", language: "tr", type: 'like' };
 
@@ -1554,12 +1655,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("doluyub")||lowerCaseComment.includes("doluyube")  ) {
+    if (lowerCaseComment.includes("doluyub") || lowerCaseComment.includes("doluyube")) {
         let response;
-        
+
 
         response = { text: member + " dolanım başına dolanım", language: "tr", type: 'like' };
 
@@ -1568,12 +1669,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
     if (lowerCaseComment.includes("uç")) {
         let response;
-        
+
 
         response = { text: member + "nereye uçayım ? ", language: "tr", type: 'like' };
 
@@ -1582,12 +1683,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("yaxşı?") || lowerCaseComment.includes("yaxşi?")  || lowerCaseComment.includes("yaxsi?") ) {
+    if (lowerCaseComment.includes("yaxşı?") || lowerCaseComment.includes("yaxşi?") || lowerCaseComment.includes("yaxsi?")) {
         let response;
-        
+
 
         response = { text: member + " yahşı aşkım başım üste", language: "tr", type: 'like' };
 
@@ -1596,16 +1697,16 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    
-    
-    
 
-    if (lowerCaseComment.includes("gecen xeyre") || lowerCaseComment.includes("gecən xeyre") || lowerCaseComment.includes("gecən xeyrə") || lowerCaseComment.includes("gecəniz xeyrə")  || lowerCaseComment.includes("geceniz xeyre")) {
+
+
+
+    if (lowerCaseComment.includes("gecen xeyre") || lowerCaseComment.includes("gecən xeyre") || lowerCaseComment.includes("gecən xeyrə") || lowerCaseComment.includes("gecəniz xeyrə") || lowerCaseComment.includes("geceniz xeyre")) {
         let response;
-        
+
 
         response = { text: member + " hayra karşı uğur apar yine gel", language: "tr", type: 'like' };
 
@@ -1614,12 +1715,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
 
-    if (lowerCaseComment.includes("nagil") || lowerCaseComment.includes("nagıl") || lowerCaseComment.includes("nağıl") ) {
+    if (lowerCaseComment.includes("nagil") || lowerCaseComment.includes("nagıl") || lowerCaseComment.includes("nağıl")) {
         let response;
-        
+
 
         response = { text: member + " nağıl danışırsam sen uyurdun", language: "tr", type: 'like' };
 
@@ -1628,14 +1729,105 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    
 
-    
-    if (lowerCaseComment.includes("aye")  ) {
+    if (lowerCaseComment.includes("miki") || lowerCaseComment.includes("mikii") || lowerCaseComment.includes("mıkı") || lowerCaseComment.includes("mıkıı")) {
         let response;
-        
+
+
+        response = { text: member + " mıkı mıkı dünya şıkı şıkı dünya", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+
+    if (lowerCaseComment.includes("demir") || lowerCaseComment.includes("dəmir")) {
+        let response;
+
+
+        response = { text: member + " ben karaçımıyım demir alayım?", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+    if (lowerCaseComment.includes("manyak")) {
+        let response;
+
+
+        response = { text: member + " manyağsan manyağım desene oğlum", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+
+    if (lowerCaseComment.includes("reklam")) {
+        let response;
+
+
+        response = { text: member + " ben reklamı çok paha ediyorum", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+    if (lowerCaseComment.includes("bigli") || lowerCaseComment.includes("bığlı")) {
+        let response;
+
+
+        response = { text: member + " bıyıklı kız arıyorum", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+    if (lowerCaseComment.includes("söy") || lowerCaseComment.includes("soy")) {
+        let response;
+
+
+        response = { text: member + " söyüş söymek olmaz ayıp ayıp", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+    if (lowerCaseComment.includes("okuz") || lowerCaseComment.includes("öküz")) {
+        let response;
+
+
+        response = { text: member + " bana öküz dedin kalbimi kırdın", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+    if (lowerCaseComment.includes("aye")) {
+        let response;
+
 
         response = { text: member + " aye değilim ben Nerbala beyim", language: "tr", type: 'like' };
 
@@ -1644,30 +1836,32 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
     }
-    
 
-    if (lowerCaseComment.includes("adımı")  || lowerCaseComment.includes("adimi")   ) {
+
+
+
+    if (lowerCaseComment.includes("adımı") || lowerCaseComment.includes("adimi")) {
 
         let response;
 
         let filteredComment = data.comment.replace(/\b(adımı|adimi)\b/g, '');
 
-        response = { text: member +  filteredComment, language: "tr", type: 'like' };
+        response = { text: member + filteredComment, language: "tr", type: 'like' };
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
-    
 
 
-    if (lowerCaseComment.includes("qarşılıq") || lowerCaseComment.includes("takip") || lowerCaseComment.includes("karşılık")    || lowerCaseComment.includes("programı")   ) {
+
+    if (lowerCaseComment.includes("qarşılıq") || lowerCaseComment.includes("takip") || lowerCaseComment.includes("karşılık") || lowerCaseComment.includes("programı")) {
 
         let response;
 
@@ -1678,12 +1872,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    
-    if (lowerCaseComment.includes("yaxşiyam") || lowerCaseComment.includes("yaxşıyam") || lowerCaseComment.includes("elayam")    || lowerCaseComment.includes("əlayam")   ) {
+
+    if (lowerCaseComment.includes("yaxşiyam") || lowerCaseComment.includes("yaxşıyam") || lowerCaseComment.includes("elayam") || lowerCaseComment.includes("əlayam")) {
 
         let response;
 
@@ -1694,12 +1888,12 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-        
-    if (lowerCaseComment.includes("bəli") || lowerCaseComment.includes("beli")   ) {
+
+    if (lowerCaseComment.includes("bəli") || lowerCaseComment.includes("beli")) {
 
         let response;
 
@@ -1710,11 +1904,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("bəli") || lowerCaseComment.includes("beli")   ) {
+    if (lowerCaseComment.includes("bəli") || lowerCaseComment.includes("beli")) {
 
         let response;
 
@@ -1725,11 +1919,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("adımı") || lowerCaseComment.includes("adimi")  ) {
+    if (lowerCaseComment.includes("adımı") || lowerCaseComment.includes("adimi")) {
 
         let response;
 
@@ -1740,11 +1934,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("su")   ) {
+    if (lowerCaseComment.includes("su")) {
 
         let response;
 
@@ -1755,11 +1949,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("gülmekden") || lowerCaseComment.includes("öldüm")  || lowerCaseComment.includes("gülməkdən") || lowerCaseComment.includes("gülməkdən")  ) {
+    if (lowerCaseComment.includes("gülmekden") || lowerCaseComment.includes("öldüm") || lowerCaseComment.includes("gülməkdən") || lowerCaseComment.includes("gülməkdən")) {
 
         let response;
 
@@ -1770,11 +1964,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
-    if (lowerCaseComment.includes("haralisan") || lowerCaseComment.includes("haralısan") || lowerCaseComment.includes("nerelisin")  ) {
+    if (lowerCaseComment.includes("haralisan") || lowerCaseComment.includes("haralısan") || lowerCaseComment.includes("nerelisin")) {
 
         let response;
 
@@ -1785,12 +1979,11 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
-        }
+        } lakaka1(member);
 
     }
 
 });
-
 
 // New gift received
 let callCount = 0; // the counter variable
@@ -2113,43 +2306,6 @@ connection.on('social', (data) => {
 
 
 
-// connection.on('member', (data) => {
-//     let userName = data.uniqueId;
-//     let profilePictureUrl = data.profilePictureUrl;
-
-//     if(isPaused) return;
-//     messagesQueue = messagesQueue.filter(item => item.type !== 'random');
-
-
-//     const messages = [
-//         { text: " hoş geldin", language: "tr" },
-//         { text: " Hoş geldin, Seni bekliyorduk", language: "tr" },
-//         { text: " Hoş geldin ,Lütfen arkadaşlarını davet et", language: "tr" },
-//         { text: " Hoş geldin , Seni Seviyoruz", language: "tr" },
-
-
-//         // { text: " welcome", language: "en" },
-//     ];
-
-//     function getRandomMessage(messages) {
-//         const randomIndex = Math.floor(Math.random() * messages.length);
-//         return messages[randomIndex];
-//     }
-//     const randomMessage = getRandomMessage(messages);
-
-
-//     let end = { text: data.nickname + randomMessage.text, language: randomMessage.language, type: 'member' };
-
-//     if (!usernames.has(userName)) {
-//         messagesQueue.push(end);
-//         processQueue();
-//     }
-//     lakaka1(userName);
-
-// })
-
-
-
 function isPendingStreak(data) {
     return data.giftType === 1 && !data.repeatEnd;
 }
@@ -2179,9 +2335,6 @@ function lakaka1(username) {
         }
     }, 30000);
 
-    // ...
-    // Geri kalan gift fonksiyonu kodu
-    // ...
 }
 let previousLikeCount = 0;
 
@@ -2202,10 +2355,40 @@ connection.on('like', (data) => {
     const messages = [
         { text: " yayımı beğendiğin için teşekkür ederim", language: "tr" },
         { text: " yayımı beğeniyor", language: "tr" },
+        { text: " senin dün gece ağladım", language: "tr" },
         { text: " ellerin dert görmesin", language: "tr" },
         { text: " iyiki varsın", language: "tr" },
+        { text: " cimi cimi cimi haca haca haca", language: "tr" },
+        { text: " ben bomba kimi tiktokerim", language: "tr" },
+        { text: " öyle bir vaxt gelecek xoş hayat görsenecek", language: "tr" },
+        { text: " emi kızı kurban olsun emi oğlu yatan yere", language: "tr" },
         { text: " lütfen yayımı paylaş", language: "tr" },
+        { text: " kimselere sataşma", language: "tr" },
+        { text: "senin eşkin getirdi beni dile", language: "tr" },
+        { text: "görmürem seni hayli zamandır", language: "tr" },
+        { text: "darıhmışam o kadar darıhmışam", language: "tr" },
+        { text: " sensiz gelen yaz değil kalbim seni gözleyir", language: "tr" },
+        { text: " millet kazandığımız paranın hesabını yapıyor.", language: "tr" },
+        { text: " cici kızlar merhaba nerbala çıktı ortaya", language: "tr" },
+        { text: "şimdi ben buraya neden çıktım niyçin çıkdım?", language: "tr" },
+        { text: " bele pisde çıxmasın canlara değen oğlanım", language: "tr" },
         { text: " seni kalbime yazdım", language: "tr" },
+        { text: " seni okşar şirin birini tapmışam", language: "tr" },
+        { text: " yat bu yuhudan oyanma bir addımda yakınlaş", language: "tr" },
+        { text: " danışırdım özümle geceler", language: "tr" },
+        { text: " sevgini bana çok gördün sen", language: "tr" },
+        { text: " derdim çok ümüdüm yok içmeye başlamışam", language: "tr" },
+        { text: " cansız resmime bakmayın dostlarım ben çok çetinlikler gördüm", language: "tr" },
+        { text: " ay nenen kurban ay baban kurban", language: "tr" },
+        { text: " igiddi çok merddi dağlar oğlu dağlar", language: "tr" },
+        { text: " renci karaşa salmışam", language: "tr" },
+        { text: " teze iks 7 almışam", language: "tr" },
+        { text: " bizim ikimizde deliyiz", language: "tr" },
+        { text: " hayır ola hansı sepepten dağıdıb benim ailemi", language: "tr" },
+        { text: " yadıma düşür kövrelirem o günler", language: "tr" },
+        { text: " tanıyır hamı meni sürürem geceni selikeli", language: "tr" },
+        { text: " benim peşimi kızlar bırakmıyorda", language: "tr" },
+        { text: " siyaset pulnan idare olunur", language: "tr" },
         { text: " sen üreksen", language: "tr" },
         { text: " nerelerdeydin sen", language: "tr" },
         { text: " beni seviyormusun?", language: "tr" },
@@ -2231,7 +2414,10 @@ connection.on('like', (data) => {
         { text: " vuruldum sana", language: "tr" },
         { text: " sen bezeksen bende nakış", language: "tr" },
         { text: " kırk kepiyin olmaz?", language: "tr" },
+        { text: " qoy bütün alem bizden danışsın", language: "tr" },
         { text: " hesabına her kes takip atsın", language: "tr" },
+        { text: " kime isteyirsiz salam deyin", language: "tr" },
+        { text: "  başıma bir taş düşeydi o kızı alanda  ay kaynana", language: "tr" },
         { text: " sen daha iyilerine layıksın", language: "tr" },
         { text: " hayatımın anlamısın", language: "tr" },
         { text: " eşk olsun sana", language: "tr" },
@@ -2270,6 +2456,11 @@ connection.on('like', (data) => {
         { text: " Seni seviyorum", language: "tr" },
         { text: " İyiki yayıma geldin", language: "tr" },
         { text: " beğendiğin üçün teşekkürler", language: "tr" },
+        { text: " şeytan olum sen bana daş at ginen", language: "tr" },
+        { text: " hayf ona ayırdığım geceler", language: "tr" },
+        { text: "kapını möhkem vurma teze koydurduk", language: "tr" },
+
+        { text: "ama seni seviyorum findik burunlum dedi. oysaki benim burnum keleş gibi", language: "tr" },
         { text: "humarit brattt", language: "tr" },
         { text: "Benim ondan gözüm su içmiyor", language: "tr" },
         { text: "Kasıbların kadasını alım", language: "tr" },
@@ -2283,10 +2474,12 @@ connection.on('like', (data) => {
         { text: "Yayımı paylaşanlara takip gönderin", language: "tr" },
         { text: "Arkadaşlarını davet eden her kese takip gönderin", language: "tr" },
         { text: "herkes kaçışıyor", language: "tr" },
-
+        { text: "mauqlidi kakam mauqli", language: "tr" },
+        { text: "seni getirecem rusiyada saxlayacam.öyüm var eşiyim var", language: "tr" },
         { text: "Yakıyorsun buraları", language: "tr" },
         { text: "Bir birinize takip gönderin", language: "tr" },
         { text: "Günah kimdedir?", language: "tr" },
+        { text: "kimdi küsdü cavanlığım", language: "tr" },
 
         { text: "Cavanın gülmeyi bana hoş gelir", language: "tr" },
         { text: "konuşmakdan yoruldum", language: "tr" },
