@@ -83,7 +83,7 @@ let usernames = new Map();
 // START
 $(document).ready(() => {
     setTimeout(function () {
-        let targetLive = "foryou_game";
+        let targetLive = "zeworldlive";
         connect(targetLive);
     }, 5000);
 
@@ -845,7 +845,7 @@ connection.on('chat', async (data) => {
         let response;
         
 
-        response = { text: member + " YIĞILIR BRADYAQALAR VESTi STRiMLYAQALAR", language: "tr", type: 'like' };
+        response = { text: member + "bratva yığılır bradyakalar vesti sitrimyakalar", language: "tr", type: 'like' };
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
@@ -1192,7 +1192,7 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
             processQueue();
         }
     }
-    if (lowerCaseComment.includes("ne dedi") || lowerCaseComment.includes("nə dedi")  || lowerCaseComment.includes("nə deyir")   ) {
+    if (lowerCaseComment.includes("ne dedi") || lowerCaseComment.includes("nə dedi")  || lowerCaseComment.includes("nə deyir")  || lowerCaseComment.includes("nə dir")  || lowerCaseComment.includes("ne diyir") || lowerCaseComment.includes("ne diir")   ) {
         let response;
         
 
@@ -1220,6 +1220,33 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         }
     }
 
+    if (lowerCaseComment.includes("qardasim") || lowerCaseComment.includes("qardaşım")   || lowerCaseComment.includes("qardasim") ) {
+        let response;
+        
+
+        response = { text: member + " qardaşın nerbala  afrikada banan yiyiyor", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("afrika")  ) {
+        let response;
+        
+
+        response = { text: member + "afrikada vaziyyet  zordur", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
     if (lowerCaseComment.includes("boyun")   ) {
         let response;
         
@@ -1479,6 +1506,76 @@ if (lowerCaseComment.includes("🤔") || lowerCaseComment.includes("🙄")) {
         
 
         response = { text: member + " ben bekar değilim evliyim otuz bir tane coçuğum var. on sekkizi seninle ayni yaşta", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    
+    if (lowerCaseComment.includes("saymır")||lowerCaseComment.includes("saymir")  ) {
+        let response;
+        
+
+        response = { text: member + " seni her zaman saydım kadrimi bilmedin", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+    if (lowerCaseComment.includes("meyve")||lowerCaseComment.includes("meyvə")  ) {
+        let response;
+        
+
+        response = { text: member + " uça bilseydim afrikaya uçardım", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("şeir")||lowerCaseComment.includes("seir") ||lowerCaseComment.includes("şeyir")  ) {
+        let response;
+        
+
+        response = { text: member + "evet ben şeyir biliyorum ala bula boz keçi", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("doluyub")||lowerCaseComment.includes("doluyube")  ) {
+        let response;
+        
+
+        response = { text: member + " dolanım başına dolanım", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        }
+    }
+
+    if (lowerCaseComment.includes("uç")) {
+        let response;
+        
+
+        response = { text: member + "nereye uçayım ? ", language: "tr", type: 'like' };
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
