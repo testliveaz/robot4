@@ -1945,7 +1945,18 @@ connection.on('chat', async (data) => {
 
 // New gift received
 let callCount = 0; // the counter variable
-
+function upsertUserCount(username, countIncrement) {
+    fetch('/upsert-count', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, countIncrement })
+    })
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+}
 let userCallCount = {}; // the object to track calls per user
 // // New gift received
 connection.on('gift', (data) => {
