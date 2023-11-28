@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "Tiktok Printer",
 	"main": "server.js",
+	"engines": {
+		"node": ">=16"
+	  },	  
 	"dependencies": {
 		"dotenv": "^16.0.0",
 		"express": "^4.17.2",
