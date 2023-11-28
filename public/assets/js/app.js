@@ -69,7 +69,6 @@ function playNextSound() {
 }
 
 
-
 let connection = new TikTokIOConnection(undefined);
 let finishGame = false;
 let iconList = [];
@@ -1930,23 +1929,7 @@ connection.on('chat', async (data) => {
 
 });
 
-
-// client.js
-function upsertUserCount(username, countIncrement) {
-    fetch('/upsert-count', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ username, countIncrement })
-    })
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
-}
-
-
-
+// New gift received
 let callCount = 0; // the counter variable
 
 let userCallCount = {}; // the object to track calls per user
@@ -1957,7 +1940,6 @@ connection.on('gift', (data) => {
     if (!isPendingStreak(data) && data.diamondCount > 0) {
         let giftCount = data.diamondCount * data.repeatCount;
         upsertUserCount(member, giftCount);
-
         for (let i = 0; i < data.repeatCount; i++) {
 
             //baliq qulagi qizlar
