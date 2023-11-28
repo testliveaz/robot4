@@ -1,12 +1,37 @@
 require('dotenv').config();
-
 const express = require('express');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
+const fs = require('fs');
+const path = require('path');
 const { TikTokConnectionWrapper, getGlobalConnectionCount } = require('./connectionWrapper');
 
 const app = express();
 const httpServer = createServer(app);
+
+const sql = require('mssql');
+
+const config = {
+    user: 'DB_A46FF7_panorama_admin',         // Kullanıcı adınız
+    password: 'panorama48Dd',     // Şifreniz
+    server: 'sql6002.site4now.net',         // Sunucu adresiniz
+    database: 'DB_A46FF7_panorama'      // Veritabanı adınız
+};
+
+
+async function upsertUserCount(username, countIncrement) {
+    try {
+        await sql.connect(config);
+        await sql.query`EXEC UpsertUserCount ${username}, ${countIncrement}`;
+    } catch (err) {
+        console.error('SQL error', err);
+    }
+}
+
+
+
+// JSON içerikler için middleware ekle
+app.use(express.json());
 
 // Enable cross origin resource sharing
 const io = new Server(httpServer, {
@@ -14,6 +39,7 @@ const io = new Server(httpServer, {
         origin: '*'
     }
 });
+
 
 io.on('connection', (socket) => {
     let tiktokConnectionWrapper;
@@ -72,10 +98,23 @@ setInterval(() => {
     io.emit('statistic', { globalConnectionCount: getGlobalConnectionCount() });
 }, 5000)
 
+
+
+app.post('/upsert-count', async (req, res) => {
+    try {
+        const { username, countIncrement } = req.body;
+        await sql.connect(config);
+        await sql.query`EXEC UpsertUserCount ${username}, ${countIncrement}`;
+        res.status(200).send('Count updated');
+    } catch (err) {
+        console.error('SQL error', err);
+        res.status(500).send('Server error');
+    }
+});
 // Serve frontend files
 app.use(express.static('public'));
 
 // Start http listener
-const port = process.env.PORT || 8555;
+const port = process.env.PORT || 7888;
 httpServer.listen(port);
 console.info(`Server running! Please visit http://localhost:${port}`);
