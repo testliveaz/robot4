@@ -603,7 +603,6 @@ connection.on('chat', async (data) => {
         response = { text: member + " hayır ben uyumam  gece hayatına dalarım", language: "tr", type: 'like' };
 
 
-        // Eğer uygun bir yanıt varsa, kuyruğa ekle
         if (response && !usernames.has(member)) {
             messagesQueue.push(response);
             processQueue();
@@ -740,6 +739,21 @@ connection.on('chat', async (data) => {
 
 
         response = { text: member + " bana rüşvetmi teklif ediyorsun?", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(member)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(member);
+    }
+
+
+    if (lowerCaseComment.includes("ucuz") ) {
+        let response;
+
+
+        response = { text: member + " ne işim var benim ucuz yolda bana biraz paha gelin", language: "tr", type: 'like' };
 
 
         // Eğer uygun bir yanıt varsa, kuyruğa ekle
