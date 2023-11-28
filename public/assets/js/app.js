@@ -28,7 +28,7 @@ window.onload = function () {
         let sound = document.getElementById(`sound${i}`);
         sound.onended = playNextSound;
         sounds[i] = sound;
-        soundCount[i] = 0;  // Initialize the count for each sound to 0
+        soundCount[i] = 0;  
     }
 };
 function playSpecificSound(id) {
