@@ -299,11 +299,6 @@ connection.on('chat', async (data) => {
     // Şimdiki zamanı alıyoruz
     let simdi = new Date().getTime();
 
-    // Kullanıcının son 20 saniye içinde bir ses çalıp çalmadığını kontrol ediyoruz
-    if (sonSesCalmaZamani[member] && (simdi - sonSesCalmaZamani[member] < 20000)) {
-        // Eğer çaldıysa, bir ses çalmayı engelliyoruz
-        return;
-    }
 
 
 
