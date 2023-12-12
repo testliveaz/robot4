@@ -2067,13 +2067,13 @@ connection.on('gift', (data) => {
     if (!isPendingStreak(data) && data.diamondCount > 0) {
         if (!isModalOpen && !isWaitingForNextQuestion) {
             let giftCount = data.diamondCount * data.repeatCount;
-            if (data.giftId === 5827) {
+           if (data.giftId === 5827) {
                 document.getElementById('cevap1').click();
                 checkAnswerAndShowModal(0, userName, profilePictureUrl);
             } else if (data.giftId === 5655) {
                 document.getElementById('cevap2').click();
                 checkAnswerAndShowModal(1, userName, profilePictureUrl);
-            } else if (data.giftId === 5583) {
+            } else if (data.giftId === 5523) {
                 document.getElementById('cevap3').click();
                 checkAnswerAndShowModal(2, userName, profilePictureUrl);
             } else if (data.giftId === 5269) {
