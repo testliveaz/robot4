@@ -15,7 +15,7 @@ let winner = [];
 let animationID;
 let defaultRate = 1.2; // Hızı varsayılan 1.5 katına çıkarır
 let messagesQueue = [];
-let member = "mirtlive"
+let member = "tt_takip_"
 let usernames = new Map();
 // START
 $(document).ready(() => {
