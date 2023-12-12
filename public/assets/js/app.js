@@ -47,9 +47,9 @@ function connect(targetLive) {
 let sorular = [
     { soru: "Azərbaycanın paytaxtı hansı şəhərdir?", cevaplar: ["Bakı", "Gəncə", "Sumqayıt", "Lənkəran"], dogruCevap: 0 },
     { soru: "Azərbaycanın rəsmi dili hansıdır?", cevaplar: ["Azərbaycanca", "Rusca", "Türkcə", "İngiliscə"], dogruCevap: 0 },
-    { soru: "Azərbaycanın bayrağı hansı rənglərdədir?", cevaplar: ["Göy və qırmızı", "Qırmızı və qara", "Yaşıl və qara", "Göy və sarı"], dogruCevap: 0 },
+    { soru: "Azərbaycanın bayrağında hansı rənglər var?", cevaplar: ["Göy və qırmızı", "Qırmızı və qara", "Yaşıl və qara", "Göy və sarı"], dogruCevap: 0 },
     { soru: "Azərbaycanın milli qida hansıdır?", cevaplar: ["Plov", "Pizza", "Burger", "Sushi"], dogruCevap: 0 },
-    { soru: "Xüsusilə sıcak, çöl ikliminə sahib olan ölkə hansıdır?", cevaplar: ["Səudiyyə Ərəbistanı", "Meksika", "Kanada", "Çin"], dogruCevap: 0 },
+    { soru: "Xüsusilə isti, çöl iqliminə sahib olan ölkə hansıdır?", cevaplar: ["Səudiyyə Ərəbistanı", "Meksika", "Kanada", "Çin"], dogruCevap: 0 },
     { soru: "Giza Piramitləri hansı ölkədə yerləşir?", cevaplar: ["Türkiyə", "Mısır", "Yunanıstan", "Meksika"], dogruCevap: 1 },
     { soru: "Nil çayının mənbəyi hansı göldə yerləşir?", cevaplar: ["Tanganika gölü", "Victoria gölü", "Kariba gölü", "Kyivu gölü"], dogruCevap: 0 },
     { soru: "\"Big Ben\" hansı şəhərdə yerləşir?", cevaplar: ["Paris", "Londra", "Roma", "Berlin"], dogruCevap: 1 },
@@ -58,7 +58,7 @@ let sorular = [
     { soru: "2020 Yay Olimpiyatları hansı şəhərdə keçirildi?", cevaplar: ["Rio de Janeiro", "Tokyo", "Londra", "Sydney"], dogruCevap: 1 },
     { soru: "\"Büyük Duvar\" hansı ölkədə yerləşir?", cevaplar: ["Çin", "Rusiya", "Kanada", "Avstraliya"], dogruCevap: 0 },
     { soru: "Amazon Yağış Ormanları hansı kıtada yerləşir?", cevaplar: ["Afrika", "Asiya", "Avropa", "Cənubi Amerika"], dogruCevap: 3 },
-    { soru: "\"Taj Mahal\" hansı ölkədə yerləşir?", cevaplar: ["Hindistan", "Tayland", "Nepal", "Pakistan"], dogruCevap: 0 },
+    { soru: "\"Tac Mahal\" hansı ölkədə yerləşir?", cevaplar: ["Hindistan", "Tayland", "Nepal", "Pakistan"], dogruCevap: 0 },
     { soru: "Azərbaycanın ən böyük gölü hansıdır?", cevaplar: ["Göyçə", "Sarysu", "Mingəçevir", "Ceyranbatan"], dogruCevap: 0 },
     { soru: "Azərbaycanın milli dansı hansıdır?", cevaplar: ["Yallı", "Salsa", "Tango", "Ballet"], dogruCevap: 0 },
     { soru: "Azərbaycanın milli hərəkəti hansıdır?", cevaplar: ["Yumruq vurmaq", "Atmaq", "Oynaq", "Döyüş"], dogruCevap: 0 },
@@ -2073,7 +2073,7 @@ connection.on('gift', (data) => {
             } else if (data.giftId === 5655) {
                 document.getElementById('cevap2').click();
                 checkAnswerAndShowModal(1, userName, profilePictureUrl);
-            } else if (data.giftId === 5760) {
+            } else if (data.giftId === 5583) {
                 document.getElementById('cevap3').click();
                 checkAnswerAndShowModal(2, userName, profilePictureUrl);
             } else if (data.giftId === 5269) {
