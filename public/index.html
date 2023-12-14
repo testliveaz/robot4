@@ -42,12 +42,28 @@
   <div id="second-animation-container"></div>
 
   <div id="particle-container"></div>
+  <span style="    color: #fefefe;">Liderlər</span>
+  <br>
+  <div id="leadersBoard" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+    <div id="topUser1Container" style="text-align: center;">
+      <img id="topUserPic1" src="" alt="1-ci yer"  class="animePic" style="width: 70px; height: 70px;     border-radius: 50%;">
+      <span id="topUserScore1"></span>
+    </div>
+    <div id="topUser2Container" style="text-align: center;">
+      <img id="topUserPic2" src="" alt="2-ci yer"  class="animePic"  style="width: 60px; height: 60px;    border-radius: 50%;">
+      <span id="topUserScore2"></span>
+    </div>
+    <div id="topUser3Container" style="text-align: center;">
+      <img id="topUserPic3" src="" alt="3-cü yer"  class="animePic"  style="width: 50px; height: 50px;    border-radius: 50%;">
+      <span id="topUserScore3"></span>
+    </div>
+  </div>
   <span style="    color: #fefefe;">Ən son cavab verən</span>
   <div id="profilePictureContainer">
 
     <img id="profilePicture" src="mirtlive.jpeg" alt="User Profile Picture">
-  </div>
 
+  </div>
 </div>
 <div id="modal" class="modal">
   <div class="modal-content">
@@ -70,34 +86,56 @@
   }
 
   #oyun {
-  position: relative;
-  /* Çocuk div'leri pozisyonlamak için */
-  background-color: #7db0e6;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  transition: background-color 2s ease;
-  min-height: 300px; /* Minimum yükseklik ayarı */
-  display: flex;
-  flex-direction: column; /* İçeriği yatayda değil, dikeyde sırala */
-  align-items: center; /* İçeriği dikeyde ortala */
+    position: relative;
+    /* Çocuk div'leri pozisyonlamak için */
+    background-color: #7db0e6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 2s ease;
+    min-height: 300px;
+    /* Minimum yükseklik ayarı */
+    display: flex;
+    flex-direction: column;
+    /* İçeriği yatayda değil, dikeyde sırala */
+    align-items: center;
+    /* İçeriği dikeyde ortala */
+  }
+  .animePic {
+    animation: floatAnimation 3s ease-in-out infinite;
 }
 
-.cevap-konteyner {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  flex-wrap: wrap; /* İçeriği bir alt satıra geçir */
-  justify-content: center; /* İçeriği yatayda ortala */
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
-#soru {
-  margin-bottom: 20px;
-  color: #fefefe;
-  word-wrap: break-word; /* Uzun kelimeleri veya metinleri satır sonunda böler */
-  width: 300px;
-}
+
+  .cevap-konteyner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    /* İçeriği bir alt satıra geçir */
+    justify-content: center;
+    /* İçeriği yatayda ortala */
+  }
+
+  #soru {
+    margin-bottom: 20px;
+    color: #fefefe;
+    word-wrap: break-word;
+    /* Uzun kelimeleri veya metinleri satır sonunda böler */
+    width: 300px;
+  }
 
   /* Profil resmi container'ı için stil */
   /* Profil resmi container'ı için stil */
@@ -168,6 +206,7 @@
     width: 25px;
   }
 
+  
 
   /* Modal Styles */
   .modal {
@@ -177,7 +216,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 30%;
     background-color: rgba(0, 0, 0, 0.4);
   }
 
