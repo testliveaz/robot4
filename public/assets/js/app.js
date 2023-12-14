@@ -5,7 +5,7 @@ let maxQueueSizePerSound = 10;
 let retryInterval = 3000; // 5 saniye sonra yeniden deneme süresi
 var volumeLevel = 0.1;  // Volume level for all voices
 
-
+let userScores = {};
 
 let connection = new TikTokIOConnection(undefined);
 let finishGame = false;
@@ -3864,15 +3864,53 @@ let isModalOpen = false;
 let isWaitingForNextQuestion = false;
 
 
+
+// Kullanıcının puanını güncelleme fonksiyonu
+function updateScore(userName, profilePictureUrl, isCorrect) {
+    if (isCorrect) {
+        if (!userScores[userName]) {
+            userScores[userName] = { score: 0, profilePic: profilePictureUrl };
+        }
+        userScores[userName].score++;
+        displayTopUsers(); // En yüksek puan alan kullanıcıları güncelle
+    }
+}
+
+// En yüksek puan alan ilk 3 kullanıcıyı gösterme fonksiyonu
+function displayTopUsers() {
+    let sortedUsers = Object.entries(userScores).sort((a, b) => b[1].score - a[1].score);
+    let topUsers = sortedUsers.slice(0, 3);
+
+    // İlk 3 kullanıcı için profil resmi ve puanını güncelle
+    for (let i = 0; i < 3; i++) {
+        let userProfilePic = document.getElementById(`topUserPic${i + 1}`);
+        let userScore = document.getElementById(`topUserScore${i + 1}`);
+        
+        if (topUsers[i]) {
+            userProfilePic.src = topUsers[i][1].profilePic;
+            userScore.textContent = `Xal: ${topUsers[i][1].score}`;
+            userProfilePic.style.display = 'block';
+            userScore.style.display = 'block';
+        } else {
+            userProfilePic.style.display = 'none';
+            userScore.style.display = 'none';
+        }
+    }
+}
+
+
+// `checkAnswerAndShowModal` fonksiyonunda puan güncellemesi
 function checkAnswerAndShowModal(buttonIndex, userName, profilePictureUrl) {
     var isCorrect = buttonIndex === sorular[suankiSoruIndex].dogruCevap;
     var mesaj = isCorrect ? "Düzgün cavab! - " : "Səhv cavab! - ";
     showModal(mesaj + userName);
 
-    // Profil resmini görüntülemek için resim URL'sini ayarlayın
+    // Profil resmini güncelle
     document.getElementById('profilePicture').src = profilePictureUrl;
-}
 
+    // Puanı güncelle
+    updateScore(userName, profilePictureUrl, isCorrect);
+}
 
 var cevapButonlari = document.querySelectorAll('.cevap');
 cevapButonlari.forEach(function (buton, index) {
