@@ -5864,7 +5864,7 @@ let availableMessages = [
     { text: " sen bezeksen bende nakış", language: "tr" },
         { text: "bidene ele bidene bele eleye bilersen bele?", language: "tr" },
         { text: "bir deyqe deyanında bıra bırı bır bıra bıra bır", language: "tr" },
-        { text: " takor RS teqdim edir, language: "tr" },
+        { text: " takor RS teqdim edir", language: "tr" },
     { text: " kırk kepiyin olmaz?", language: "tr" },
     { text: " qoy bütün alem bizden danışsın", language: "tr" },
           { text: "ay xanaraq neylemişem neyliyim? xengel alim bağım başım neyleyim?", language: "tr" },
