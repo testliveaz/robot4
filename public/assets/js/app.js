@@ -2041,12 +2041,7 @@ connection.on('social', (data) => {
         // Eğer çaldıysa, bir ses çalmayı engelliyoruz
         return;
     }
-    if (data.displayType === "pm_mt_guidance_share") {
-
-        playSpecificSound(33);
-        // Bu ses çalmanın zamanını kaydediyoruz
-        sonSesCalmaZamani1[member] = simdi1;
-    }
+  
 });
 
 
@@ -2160,10 +2155,7 @@ connection.on('like', (data) => {
     let profilePictureUrl = data.profilePictureUrl;
     let totalLikeCount = data.totalLikeCount;
 
-    if (Math.floor(totalLikeCount / 1000) > Math.floor(previousLikeCount / 1000)) {
-        playSpecificSound(23);
-    }
-
+ 
     previousLikeCount = totalLikeCount;
 
     messagesQueue = messagesQueue.filter(item => item.type !== 'random');
