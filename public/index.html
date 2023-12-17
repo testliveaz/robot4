@@ -12,313 +12,92 @@
 <script type="text/javascript" src="assets/js/connection.js"></script>
 <script type="text/javascript" src="assets/js/app.js"></script>
 <script src="https://code.responsivevoice.org/responsivevoice.js?key=2u7Qd768"></script>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <style>
 
 </style>
 </head>
 
-<div id="oyun">
 
-  <div id="soru"></div>
-  <div class="cevap-konteyner">
-    <img src="1.png" class="icon">
-    <button class="cevap" id="cevap1">Cevap 1</button>
-  </div>
-  <div class="cevap-konteyner">
-    <img src="2.png" class="icon">
-    <button class="cevap" id="cevap2">Cevap 2</button>
-  </div>
-  <div class="cevap-konteyner">
-    <img src="3.png" class="icon">
-    <button class="cevap" id="cevap3">Cevap 3</button>
-  </div>
-  <div class="cevap-konteyner">
-    <img src="4.png" class="icon">
-    <button class="cevap" id="cevap4">Cevap 4</button>
-  </div>
+  <!-- <audio id="sfx1" class="d-block">
+    <source src="../assets/sounds/siu.mp3" preload="auto" type="audio/mpeg">
+  </audio>
+  <audio id="sfx2" class="d-block">
+    <source src="../assets/sounds/wee.mp3" preload="auto" type="audio/mpeg">
+  </audio>
+  <audio id="sfx3" class="d-block">
+    <source src="../assets/sounds/33.mp3" preload="auto" type="audio/mpeg">
+  </audio>
+  <audio id="sfx4" class="d-block">
+    <source src="../assets/sounds/yaxsilar.mp3" preload="auto" type="audio/mpeg">
+  </audio>
+  <audio id="sfx5" class="d-block">
+    <source src="../assets/sounds/mujik.mp3" preload="auto" type="audio/mpeg">
+  </audio>
+  <audio id="sfx6" class="d-block">
+    <source src="../assets/sounds/auye.mp3" preload="auto" type="audio/mpeg">
+  </audio>
+  <audio id="sfx7" class="d-block">
+    <source src="../assets/sounds/naxcivan.mp3" preload="auto" type="audio/mpeg">
+  </audio>
+  <audio id="sfx8" class="d-block">
+    <source src="../assets/sounds/talislar.mp3" preload="auto" type="audio/mpeg">
+  </audio>
+  <audio id="sfx9" class="d-block">
+    <source src="../assets/sounds/yerazlar.mp3" preload="auto" type="audio/mpeg">
+  </audio> -->
+  <!-- /salam -->
+    <!-- /salam -->
+  <audio id="sound1" src="sound1.mp3"></audio>
+<audio id="sound2" src="sound2.mp3"></audio>
+<audio id="sound3" src="sound3.mp3"></audio>
+<audio id="sound4" src="sound4.mp3"></audio>
+<audio id="sound5" src="sound5.mp3"></audio>
+<audio id="sound6" src="sound6.mp3"></audio>
+<audio id="sound7" src="sound7.mp3"></audio>
+<audio id="sound8" src="sound8.mp3"></audio>
+<audio id="sound9" src="sound9.mp3"></audio>
+<audio id="sound10" src="sound10.mp3"></audio>
+<audio id="sound11" src="sound11.mp3"></audio>
+<audio id="sound12" src="sound12.mp3"></audio>
+<audio id="sound13" src="sound13.mp3"></audio>
+<audio id="sound14" src="sound14.mp3"></audio>
+<audio id="sound15" src="sound15.mp3"></audio>
+<audio id="sound16" src="sound16.mp3"></audio>
+<audio id="sound17" src="sound17.mp3"></audio>
+<audio id="sound18" src="sound18.mp3"></audio>
+<audio id="sound19" src="sound19.mp3"></audio>
+<audio id="sound20" src="sound20.mp3"></audio>
+<audio id="sound21" src="sound21.mp3"></audio>
+<audio id="sound22" src="sound22.mp3"></audio>
+<audio id="sound23" src="sound23.mp3"></audio>
+<audio id="sound24" src="sound24.mp3"></audio>
+<audio id="sound25" src="sound25.mp3"></audio>
+<audio id="sound26" src="sound26.mp3"></audio>
+<audio id="sound27" src="sound27.mp3"></audio>
+<audio id="sound28" src="sound28.mp3"></audio>
+<audio id="sound29" src="sound29.mp3"></audio>
+<audio id="sound30" src="sound30.mp3"></audio>
+<audio id="sound31" src="sound31.mp3"></audio>
+<audio id="sound32" src="sound32.mp3"></audio>
+<audio id="sound33" src="sound33.mp3"></audio>
+<audio id="sound34" src="sound34.mp3"></audio>
+<audio id="sound35" src="sound35.mp3"></audio>
+<audio id="sound36" src="sound36.mp3"></audio>
+<audio id="sound37" src="sound37.mp3"></audio>
+<audio id="sound38" src="sound38.mp3"></audio>
+<audio id="sound39" src="sound39.mp3"></audio>
+<audio id="sound40" src="sound40.mp3"></audio>
+<audio id="sound41" src="sound41.mp3"></audio>
+<audio id="sound42" src="sound42.mp3"></audio>
+<audio id="sound43" src="sound43.mp3"></audio>
+<audio id="sound44" src="sound44.mp3"></audio>
+<audio id="sound45" src="sound45.mp3"></audio>
+<audio id="sound46" src="sound46.mp3"></audio>
+<audio id="sound47" src="sound47.mp3"></audio>
+  <script>
 
-  <div id="second-animation-container"></div>
-
-  <div id="particle-container"></div>
-  <span style="    color: #fefefe;">Liderlər</span>
-  <br>
-  <div id="leadersBoard" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-    <div id="topUser1Container" style="text-align: center;">
-      <img id="topUserPic1" src="" alt="1-ci yer"  class="animePic" style="width: 70px; height: 70px;     border-radius: 50%;">
-      <span id="topUserScore1"></span>
-    </div>
-    <div id="topUser2Container" style="text-align: center;">
-      <img id="topUserPic2" src="" alt="2-ci yer"  class="animePic"  style="width: 60px; height: 60px;    border-radius: 50%;">
-      <span id="topUserScore2"></span>
-    </div>
-    <div id="topUser3Container" style="text-align: center;">
-      <img id="topUserPic3" src="" alt="3-cü yer"  class="animePic"  style="width: 50px; height: 50px;    border-radius: 50%;">
-      <span id="topUserScore3"></span>
-    </div>
-  </div>
-  <span style="    color: #fefefe;">Ən son cavab verən</span>
-  <div id="profilePictureContainer">
-
-    <img id="profilePicture" src="mirtlive.jpeg" alt="User Profile Picture">
-
-  </div>
-</div>
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p id="modal-mesaj"></p>
-  </div>
-</div>
-<script>
-
-</script>
-<style>
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #4d2f2f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-
-  #oyun {
-    position: relative;
-    /* Çocuk div'leri pozisyonlamak için */
-    background-color: #7db0e6;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: background-color 2s ease;
-    min-height: 300px;
-    /* Minimum yükseklik ayarı */
-    display: flex;
-    flex-direction: column;
-    /* İçeriği yatayda değil, dikeyde sırala */
-    align-items: center;
-    /* İçeriği dikeyde ortala */
-  }
-  .animePic {
-    animation: floatAnimation 3s ease-in-out infinite;
-}
-
-@keyframes floatAnimation {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
-  .cevap-konteyner {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
-    /* İçeriği bir alt satıra geçir */
-    justify-content: center;
-    /* İçeriği yatayda ortala */
-  }
-
-  #soru {
-    margin-bottom: 20px;
-    color: #fefefe;
-    word-wrap: break-word;
-    /* Uzun kelimeleri veya metinleri satır sonunda böler */
-    width: 300px;
-  }
-
-  /* Profil resmi container'ı için stil */
-  /* Profil resmi container'ı için stil */
-  #profilePictureContainer {
-    width: 50px;
-    /* Genişlik ayarını dilediğiniz gibi değiştirebilirsiniz */
-    height: 50px;
-    /* Yükseklik ayarını dilediğiniz gibi değiştirebilirsiniz */
-    border-radius: 50%;
-    /* Daire şeklinde görüntülemek için border yarıçapını ayarlayın */
-    overflow: hidden;
-    /* Taşan içerikleri gizlemek için */
-    position: relative;
-    /* Pozisyonu göreceli olarak ayarlayın */
-    margin: 0 auto;
-    /* Resmi yatayda ortala */
-    text-align: center;
-    /* İçeriği yatayda ortala */
-  }
-
-  /* Profil resmi için stil */
-  #profilePicture {
-    width: 100%;
-    /* Resmi container'ın içine sığdırmak için genişliği 100% yapın */
-    height: auto;
-    /* Yüksekliği otomatik olarak ayarlayın */
-    display: block;
-    /* Resmi blok element olarak görüntüleyin */
-  }
-
-
-
-  .cevap {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 300px;
-    /* Veya istediğiniz başka bir sabit genişlik */
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    overflow: hidden;
-    margin-left: 10px;
-  }
-
-
-
-  @keyframes fadeInOut {
-
-    0%,
-    100% {
-      opacity: 0;
-    }
-
-    50% {
-      opacity: 0.7;
-    }
-  }
-
-  .icon {
-    animation-name: fadeInOut;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    opacity: 0.7;
-    /* Başlangıç saydamlığı */
-    height: 25px;
-    width: 25px;
-  }
-
-  
-
-  /* Modal Styles */
-  .modal {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  .modal-content {
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-  }
-
-
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  #particle-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    /* İçindeki diğer elementlerin üzerinde olmalı */
-
-  }
-</style>
-<script>
-
-  particlesJS("particle-container", {
-    particles: {
-      number: {
-        value: 100, // Parçacık sayısı (örneğin 15 veya 20)
-      },
-      color: {
-        value: ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff", "#ff8000", "#0080ff", "#8000ff", "#00ff80", "#ff0080", "#80ff00", "#ff0080", "#8000ff", "#00ff80"], // Farklı renkler için bir dizi (array) tanımlayın
-      },
-      opacity: {
-        value: 0.5,
-        anim: {
-          enable: true,
-          speed: 1,
-          opacity_min: 0.1,
-          sync: false
-        }
-      },
-      size: {
-        value: 5, // Parçacık boyutu
-      },
-      line_linked: {
-        enable: true,
-        distance: 150, // Parçacıklar arası mesafe
-        color: "#ff0000",
-        opacity: 0.4,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 2, // Hareket hızı
-        direction: "none",
-        random: true,
-        straight: false,
-        out_mode: "out",
-        bounce: false,
-      }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: {
-          enable: true,
-          mode: "repulse"
-        },
-        onclick: {
-          enable: true,
-          mode: "push"
-        },
-        resize: true
-      }
-    },
-    retina_detect: true
-  });
-
-  function changeBackgroundColor() {
-    var colors = ['#f8b195', '#f67280', '#c06c84', '#6c5b7b', '#355c7d']; // Pastel tonları
-    var randomColor = colors[Math.floor(Math.random() * colors.length)];
-    document.getElementById('oyun').style.backgroundColor = randomColor;
-  }
-
-  setInterval(changeBackgroundColor, 5000); // 5000 milisaniyede bir renk değişikliği
-
-
-
-</script>
+  </script>
 </body>
 
 </html>
