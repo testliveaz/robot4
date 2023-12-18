@@ -115,6 +115,6 @@ app.post('/upsert-count', async (req, res) => {
 app.use(express.static('public'));
 
 // Start http listener
-const port = process.env.PORT || 8007;
+const port = process.env.PORT || 8045;
 httpServer.listen(port);
 console.info(`Server running! Please visit http://localhost:${port}`);
