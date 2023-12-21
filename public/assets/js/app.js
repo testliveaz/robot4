@@ -131,14 +131,13 @@ function connect(targetLive) {
 let sonSesCalmaZamani = {};
 
 connection.on('chat', async (data) => {
- 
     let cleanNickname = data.nickname.replace(/[_\$-.]/g, '');
+    cleanNickname = cleanNickname.replace(/ə/g, 'e');
+    cleanNickname = cleanNickname.replace(/x/g, 'k');
+    if (cleanNickname.startsWith('user')) {
+        cleanNickname = 'user';
+    }
  let lowerCaseComment = data.comment.toLowerCase();
- cleanNickname = cleanNickname.replace(/ə/g, 'e');
- cleanNickname = cleanNickname.replace(/x/g, 'k');
- if (cleanNickname.startsWith('user')) {
-     cleanNickname = 'user';
- }
 
  // Şimdiki zamanı alıyoruz
  let simdi = new Date().getTime();
@@ -176,6 +175,20 @@ connection.on('chat', async (data) => {
  }
 
 
+ if (lowerCaseComment.includes("salam") || lowerCaseComment.includes("selam") || lowerCaseComment.includes("slm")) {
+
+     let response;
+
+     response = { text: cleanNickname + " Salam kadanalım hoş geldin", language: "tr", type: 'like' };
+
+
+     // Eğer uygun bir yanıt varsa, kuyruğa ekle
+     if (response && !usernames.has(cleanNickname)) {
+         messagesQueue.push(response);
+         processQueue();
+     } lakaka1(cleanNickname);
+
+ }
  if (lowerCaseComment.includes("salam") || lowerCaseComment.includes("selam") || lowerCaseComment.includes("slm")) {
 
     let response;
