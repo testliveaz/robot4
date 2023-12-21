@@ -2987,12 +2987,12 @@ function processQueue() {
                     break;
                 case 'en':
                     // İngilizce seslendirme
-                    responsiveVoice.speak(message, "UK English Male", { rate: defaultRate, volume: volumeLevel, onend: onEnd });
+                    responsiveVoice.speak(message, "Turkish Male", { rate: defaultRate, volume: volumeLevel, onend: onEnd });
                     break;
 
                 default:
                     // Dil tespit edilemediğinde varsayılan olarak İngilizce kullanın
-                    responsiveVoice.speak(message, "UK English Male", { rate: defaultRate, volume: volumeLevel, onend: onEnd });
+                    responsiveVoice.speak(message, "Turkish Male", { rate: defaultRate, volume: volumeLevel, onend: onEnd });
                     break;
             }
         } else {
