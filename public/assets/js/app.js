@@ -2557,10 +2557,15 @@ connection.on('gift', (data) => {
     if (!isPendingStreak(data) && data.diamondCount > 0) {
 
         function playRandomSound() {
-            // Generate a random sound number between 1 and 47
-            var soundNumber = Math.floor(Math.random() * 47) + 1;
+            let soundNumber;
+            do {
+                // 1 ile 47 arasında rastgele bir sayı üret
+                soundNumber = Math.floor(Math.random() * 47) + 1;
+            } while (soundNumber >= 15 && soundNumber <= 21); // 15 ile 21 arasındaysa tekrar seç
+        
             playSpecificSound(soundNumber);
         }
+        
         for (let i = 0; i < data.repeatCount; i++) {
             playRandomSound(); // Play a random sound
         }
