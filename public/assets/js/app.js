@@ -24,7 +24,7 @@ function resumeAllSounds() {
 
 
 window.onload = function () {
-    for (let i = 1; i <= 47; i++) {
+    for (let i = 1; i <= 48; i++) {
         let sound = document.getElementById(`sound${i}`);
         sound.onended = playNextSound;
         sounds[i] = sound;
@@ -2814,7 +2814,7 @@ connection.on('gift', (data) => {
             const randomSound = getRandomSound();
             playSpecificSound(randomSound);
         }
-        
+
         setTimeout(() => {
             const messages = [
                 { text: " adlı hesaba her kes takip atsın", language: "tr" },
