@@ -1546,6 +1546,19 @@ connection.on('chat', async (data) => {
             processQueue();
         } lakaka1(cleanNickname);
     }
+    if (lowerCaseComment.includes("bura haradı") || lowerCaseComment.includes("bura haradi") || lowerCaseComment.includes("haradi") || lowerCaseComment.includes("haradi")) {
+        let response;
+
+
+        response = { text: cleanNickname + " bura hazi aslanovdu", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(cleanNickname)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(cleanNickname);
+    }
 
 
     if (lowerCaseComment.includes("bilirsen") || lowerCaseComment.includes("bilirsən")) {
