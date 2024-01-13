@@ -77,7 +77,7 @@ let winner = [];
 let animationID;
 let defaultRate = 1.2; // Hızı varsayılan 1.5 katına çıkarır
 let messagesQueue = [];
-let member = "clickaz"
+let member = "mirtlive1"
 let usernames = new Map();
 // START
 $(document).ready(() => {
@@ -1546,19 +1546,6 @@ connection.on('chat', async (data) => {
             processQueue();
         } lakaka1(cleanNickname);
     }
-    if (lowerCaseComment.includes("bura haradı") || lowerCaseComment.includes("bura haradi") || lowerCaseComment.includes("haradi") || lowerCaseComment.includes("haradi")) {
-        let response;
-
-
-        response = { text: cleanNickname + " bura hazi aslanovdu", language: "tr", type: 'like' };
-
-
-        // Eğer uygun bir yanıt varsa, kuyruğa ekle
-        if (response && !usernames.has(cleanNickname)) {
-            messagesQueue.push(response);
-            processQueue();
-        } lakaka1(cleanNickname);
-    }
 
 
     if (lowerCaseComment.includes("bilirsen") || lowerCaseComment.includes("bilirsən")) {
@@ -2649,6 +2636,12 @@ connection.on('gift', (data) => {
             }
 
 
+                      // // qatigim var
+                      if (data.giftId === 8913) {
+                        // soundQueue.push(6);
+                        playSpecificSound(19);
+                    }
+
             //  Bütün səslər
             if (data.giftId === 5585) {
                 playSpecificSound(1);
@@ -2721,11 +2714,7 @@ connection.on('gift', (data) => {
 
             }
 
-            // // qatigim var
-            if (data.giftId === 8913) {
-                // soundQueue.push(6);
-                playSpecificSound(19);
-            }
+  
 
             // //sari mırt gülüş səsi
             if (data.giftId === 9111) {
