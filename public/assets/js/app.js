@@ -2650,6 +2650,12 @@ connection.on('gift', (data) => {
                 playSpecificSound(47);
             }
 
+            
+            // //sari mırt gülüş səsi
+            if (data.giftId === 9111) {
+                // soundQueue.push(6);
+                playSpecificSound(16);
+            }
 
                       // // qatigim var
                       if (data.giftId === 8913) {
@@ -2731,11 +2737,6 @@ connection.on('gift', (data) => {
 
   
 
-            // //sari mırt gülüş səsi
-            if (data.giftId === 9111) {
-                // soundQueue.push(6);
-                playSpecificSound(16);
-            }
 
             // urek top eliyibler
             if (data.giftId === 7934) {
