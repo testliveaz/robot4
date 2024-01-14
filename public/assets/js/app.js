@@ -1958,6 +1958,21 @@ connection.on('chat', async (data) => {
             processQueue();
         } lakaka1(cleanNickname);
     }
+
+        if (lowerCaseComment.includes("haradı") || lowerCaseComment.includes("haradi")  ) {
+        let response;
+
+
+        response = { text: cleanNickname + " bura hazi aslanovdu. Şerur binaları", language: "tr", type: 'like' };
+
+
+        // Eğer uygun bir yanıt varsa, kuyruğa ekle
+        if (response && !usernames.has(cleanNickname)) {
+            messagesQueue.push(response);
+            processQueue();
+        } lakaka1(cleanNickname);
+    }
+    
     if (lowerCaseComment.includes("bekarsan") || lowerCaseComment.includes("bekarsane")) {
         let response;
 
