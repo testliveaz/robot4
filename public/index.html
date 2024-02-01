@@ -17,7 +17,8 @@
 
 </style>
 </head>
-<img id="merkezGif" src="gift.gif">
+<img id="merkezGif" src="gift.gif" style="display: none;">
+<img id="merkezGif1" src="gift2.gif" style="display: none;">
   <audio id="sound1" src="sound1.mp3"></audio>
 <audio id="sound2" src="sound2.mp3"></audio>
 <audio id="sound3" src="sound3.mp3"></audio>
@@ -67,23 +68,30 @@
 <audio id="sound47" src="sound47.mp3"></audio>
 <audio id="sound48" src="sound48.mp3"></audio>
   <script>
+document.getElementById('merkezGif').style.display = 'block';
 
+// İkinci GIF'i 5 saniye sonra göster
+setTimeout(function() {
+    document.getElementById('merkezGif1').style.display = 'block';
+}, 10000); // 5000 milisaniye = 5 saniye
   </script>
 </body>
 
 </html>
 <style>
-    body, html {
+  body, html {
         height: 100%;
         margin: 0;
         display: flex;
+        flex-direction: column; /* Sütun şeklinde hizalama */
         justify-content: center;
         align-items: center;
     }
 
-    #merkezGif {
+    #merkezGif, #merkezGif1 {
         /* İsteğe bağlı olarak GIF boyutunu ayarlayabilirsiniz */
         width: 200px; 
         height: auto;
+        display: none; /* Başlangıçta görünmez */
     }
 </style>
