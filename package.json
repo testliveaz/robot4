@@ -12,7 +12,7 @@
 		"express": "^4.17.2",
 		"mssql": "^10.0.1",
 		"socket.io": "^4.4.1",
-		"tiktok-live-connector": "^0.9.20"
+		  "tiktok-live-connector": "^1.0.5"
 	},
 	"scripts": {
 		"app": "node server.js"
