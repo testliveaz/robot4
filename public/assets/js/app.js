@@ -77,7 +77,7 @@ let winner = [];
 let animationID;
 let defaultRate = 1.2; // Hızı varsayılan 1.5 katına çıkarır
 let messagesQueue = [];
-let member = "h3midovaa"
+let member = "azbesdir"
 let usernames = new Map();
 // START
 $(document).ready(() => {
