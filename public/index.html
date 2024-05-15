@@ -22,9 +22,6 @@
 
 </head>
 <style>
-  body {
-    animation: backgroundChange1 20s infinite;
-  }
 
   #myCanvas {
     display: block;
@@ -92,17 +89,6 @@
   }
 
 
-  */ #loading {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-  }
 
   #loading p {
     text-align: center;
@@ -152,41 +138,7 @@
     }
   }
 
-  .club-light {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(circle, transparent 1%, transparent 1%) 50% 50%;
-    opacity: 0;
-    animation: flash 1s linear infinite;
-  }
 
-  @keyframes flash {
-
-    0%,
-    100% {
-      opacity: 0;
-    }
-
-    50% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes backgroundChange1 {
-    0% {
-      background-color: rgba(222, 13, 13, 0.5);
-    }
-
-    50% {
-      background-color: rgba(221, 7, 131, 0.5);
-    }
-
-    100% {
-      background-color: rgba(178, 116, 116, 0.5);
-    }
-  }
-  
   .animated-text {
     position: absolute;
     width: 100%;
@@ -201,24 +153,8 @@
     /* Metni tek bir satırda tutar */
   }
 
-  #particle-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    /* İçindeki diğer elementlerin üzerinde olmalı */
-
-  }
-  @keyframes blink-animation {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-  }
 </style>
 
-<div id="particle-container"></div>
 <body>
   <!-- <div id="loading">
     <p>Loading...</p>
@@ -230,7 +166,6 @@
   <br>
   <br>
   <br>
-  <div id="particle-container"></div>
 
   <canvas id="myCanvas" width="400" height="400" style="display: block; margin: 20px auto 0;">
  
@@ -248,60 +183,7 @@
     const globalVelocity = { x: 5, y: 5 };
     // const canvas3 = document.getElementById("myCanvas3");
     // const ctx3 = canvas3.getContext("2d");
-    particlesJS("particle-container", {
-    particles: {
-      number: {
-        value: 100, // Parçacık sayısı (örneğin 15 veya 20)
-      },
-      color: {
-        value: ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff", "#ff8000", "#0080ff", "#8000ff", "#00ff80", "#ff0080", "#80ff00", "#ff0080", "#8000ff", "#00ff80"], // Farklı renkler için bir dizi (array) tanımlayın
-      },
-      opacity: {
-        value: 0.5,
-        anim: {
-          enable: true,
-          speed: 1,
-          opacity_min: 0.1,
-          sync: false
-        }
-      },
-      size: {
-        value: 5, // Parçacık boyutu
-      },
-      line_linked: {
-        enable: true,
-        distance: 150, // Parçacıklar arası mesafe
-        color: "#ff0000",
-        opacity: 0.4,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 2, // Hareket hızı
-        direction: "none",
-        random: true,
-        straight: false,
-        out_mode: "out",
-        bounce: false,
-      }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: {
-          enable: true,
-          mode: "repulse"
-        },
-        onclick: {
-          enable: true,
-          mode: "push"
-        },
-        resize: true
-      }
-    },
-    retina_detect: true
-  });
-
+  
 
   </script>
 </body>
