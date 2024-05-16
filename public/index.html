@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html>
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TakipBizz user2 + 1 + mvorxan</title>
+<title>Follow</title>
 <meta name="description" content="TakipBiz">
 <meta name="author" content="adierebel">
 <link rel="stylesheet" href="assets/css/reset.css?v=1.0">
@@ -15,177 +12,87 @@
 <script type="text/javascript" src="assets/js/connection.js"></script>
 <script type="text/javascript" src="assets/js/app.js"></script>
 <script src="https://code.responsivevoice.org/responsivevoice.js?key=2u7Qd768"></script>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-<head>
-  <title>Telefon İçin İkon Oluşturma</title>
-
-</head>
 <style>
 
-  #myCanvas {
-    display: block;
-    margin: 50px auto 0;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    background-image: none; /* Arka plan resmi kaldırıldı */
-    background-color: rgba(0, 0, 0, 0); /* Tamamen şeffaf arka plan */
-    border-radius: 10px;
-    padding: 20px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-  #myCanvas:hover {
-    border-color: #333;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    transform: scale(1.05);
-  }
-
-  /* Canvas içerisindeki metinler için stiller */
-  #myCanvas p {
-    font-family: "Arial", sans-serif;
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  }
-
-  /* Canvas içerisindeki şekiller için stiller */
-  #myCanvas .square {
-    fill: #f44336;
-    stroke: #d32f2f;
-    stroke-width: 2;
-  }
-
-  #myCanvas .circle {
-    fill: #2196f3;
-    stroke: #1976d2;
-    stroke-width: 2;
-  }
-
-  #myCanvas .triangle {
-    fill: #4caf50;
-    stroke: #388e3c;
-    stroke-width: 2;
-  }
-
-  /* Canvas içerisindeki animasyonlu objeler için stiller */
-  #myCanvas .animated-object {
-    fill: #ffc107;
-    stroke: #ffa000;
-    stroke-width: 2;
-    animation: move-object 2s ease-in-out alternate infinite;
-  }
-
-  @keyframes move-object {
-    from {
-      transform: translate(0, 0);
-    }
-
-    to {
-      transform: translate(20px, 20px);
-    }
-  }
-
-
-
-  #loading p {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .spinner {
-    margin: 0 auto;
-    width: 40px;
-    height: 40px;
-    position: relative;
-  }
-
-  .spinner div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    margin: 4px;
-    border: 4px solid #000;
-    border-radius: 50%;
-    animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #000 transparent transparent transparent;
-  }
-
-  .spinner div:nth-child(1) {
-    animation-delay: -0.45s;
-  }
-
-  .spinner div:nth-child(2) {
-    animation-delay: -0.3s;
-  }
-
-  .spinner div:nth-child(3) {
-    animation-delay: -0.15s;
-  }
-
-  @keyframes spinner {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-
-  .animated-text {
-    position: absolute;
-    width: 100%;
-    width: 440px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: blue;
-    z-index: 3;
-    background-color: rgba(255, 255, 255, 0.5);
-    white-space: nowrap;
-    /* Metni tek bir satırda tutar */
-  }
-
 </style>
+</head>
+<img id="merkezGif" src="gift.gif" style="display: none;">
+<img id="merkezGif1" src="gift2.gif" style="display: none;">
+  <audio id="sound1" src="sound1.mp3"></audio>
+<audio id="sound2" src="sound2.mp3"></audio>
+<audio id="sound3" src="sound3.mp3"></audio>
+<audio id="sound4" src="sound4.mp3"></audio>
+<audio id="sound5" src="sound5.mp3"></audio>
+<audio id="sound6" src="sound6.mp3"></audio>
+<audio id="sound7" src="sound7.mp3"></audio>
+<audio id="sound8" src="sound8.mp3"></audio>
+<audio id="sound9" src="sound9.mp3"></audio>
+<audio id="sound10" src="sound10.mp3"></audio>
+<audio id="sound11" src="sound11.mp3"></audio>
+<audio id="sound12" src="sound12.mp3"></audio>
+<audio id="sound13" src="sound13.mp3"></audio>
+<audio id="sound14" src="sound14.mp3"></audio>
+<audio id="sound15" src="sound15.mp3"></audio>
+<audio id="sound16" src="sound16.mp3"></audio>
+<audio id="sound17" src="sound17.mp3"></audio>
+<audio id="sound18" src="sound18.mp3"></audio>
+<audio id="sound19" src="sound19.mp3"></audio>
+<audio id="sound20" src="sound20.mp3"></audio>
+<audio id="sound21" src="sound21.mp3"></audio>
+<audio id="sound22" src="sound22.mp3"></audio>
+<audio id="sound23" src="sound23.mp3"></audio>
+<audio id="sound24" src="sound24.mp3"></audio>
+<audio id="sound25" src="sound25.mp3"></audio>
+<audio id="sound26" src="sound26.mp3"></audio>
+<audio id="sound27" src="sound27.mp3"></audio>
+<audio id="sound28" src="sound28.mp3"></audio>
+<audio id="sound29" src="sound29.mp3"></audio>
+<audio id="sound30" src="sound30.mp3"></audio>
+<audio id="sound31" src="sound31.mp3"></audio>
+<audio id="sound32" src="sound32.mp3"></audio>
+<audio id="sound33" src="sound33.mp3"></audio>
+<audio id="sound34" src="sound34.mp3"></audio>
+<audio id="sound35" src="sound35.mp3"></audio>
+<audio id="sound36" src="sound36.mp3"></audio>
+<audio id="sound37" src="sound37.mp3"></audio>
+<audio id="sound38" src="sound38.mp3"></audio>
+<audio id="sound39" src="sound39.mp3"></audio>
+<audio id="sound40" src="sound40.mp3"></audio>
+<audio id="sound41" src="sound41.mp3"></audio>
+<audio id="sound42" src="sound42.mp3"></audio>
+<audio id="sound43" src="sound43.mp3"></audio>
+<audio id="sound44" src="sound44.mp3"></audio>
+<audio id="sound45" src="sound45.mp3"></audio>
+<audio id="sound46" src="sound46.mp3"></audio>
+<audio id="sound47" src="sound47.mp3"></audio>
+<audio id="sound48" src="sound48.mp3"></audio>
+  <script>
+document.getElementById('merkezGif').style.display = 'block';
 
-<body>
-  <!-- <div id="loading">
-    <p>Loading...</p>
-    <div class="spinner"></div>
-  </div> -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <canvas id="myCanvas" width="400" height="400" style="display: block; margin: 20px auto 0;">
- 
-  </canvas>
-  <img id="fireworkGif1" src="fire1.gif" style="display: none; position: absolute;">
-  <img id="fireworkGif2" src="fire2.gif" style="display: none; position: absolute;">
-  <img id="fireworkGif3" src="fire3.gif" style="display: none; position: absolute;">
-
-
-  <script> 
-
-
-    const canvas = document.getElementById("myCanvas");
-    const ctx = canvas.getContext("2d");
-    const globalVelocity = { x: 5, y: 5 };
-    // const canvas3 = document.getElementById("myCanvas3");
-    // const ctx3 = canvas3.getContext("2d");
-  
-
+// İkinci GIF'i 5 saniye sonra göster
+setTimeout(function() {
+    document.getElementById('merkezGif1').style.display = 'block';
+}, 10000); // 5000 milisaniye = 5 saniye
   </script>
 </body>
 
 </html>
+<style>
+  body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Sütun şeklinde hizalama */
+        justify-content: center;
+        align-items: center;
+    }
+
+    #merkezGif, #merkezGif1 {
+        /* İsteğe bağlı olarak GIF boyutunu ayarlayabilirsiniz */
+        width: 200px; 
+        height: auto;
+        display: none; /* Başlangıçta görünmez */
+    }
+</style>
+
